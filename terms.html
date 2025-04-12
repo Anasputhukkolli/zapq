@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zappq</title>
+    <link rel="stylesheet" href="./assets/css/font.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[url('./assets/images/bgdesign.svg')] bg-no-repeat bg-cover min-h-screen bg-fixed">
+    <div class="min-h-screen ">
+     <nav class="sticky top-10 z-10 flex items-center justify-between p-3 max-w-[80rem] mx-auto bg-transparent backdrop-blur-md shadow-xs rounded-full">
+        <div class="flex items-center cursor-pointer" onclick="window.location.reload()">
+            <img src="./assets/images/logo.png" alt="Logo" class="h-10 md:h-16 mr-3">
+            <span class="text-[1.2rem] md:text-[1.7rem] font-medium font-[michromaregular]">ZappQ</span>
+        </div>
+        <div class="menu-icon relative -left-10 md:hidden" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars text-2xl"></i>
+        </div>
+        <ul class="hidden md:flex justify-center space-x-8 font-[poppinsregular] navbar-menu cursor-pointer ">
+            <li><a id="home" class="text-gray-700 hover:text-black ">Home</a></li>
+            <li><a id="about" class="text-gray-700 hover:text-black ">About</a></li>
+            <li><a id="feature" class="text-gray-700 hover:text-black ">Feature</a></li>
+            <li><a id="contact" class="text-gray-700 hover:text-black ">Contact</a></li>
+            <li><button class="md:hidden bg-black text-white px-6 font-semibold font-[poppinsmedium] py-3 rounded-full hover:bg-gray-800 cursor-pointer">Get started</button>
+            </li>
+        </ul>
+            <button class="hidden md:inline-block bg-black text-white px-6 font-semibold font-[poppinsmedium] py-3 rounded-full hover:bg-gray-800 ">Get started</button>
+        </nav>
+        
+        <!-- Terms and Conditions Content -->
+        <div class="container mx-auto px-4 md:px-8 lg:px-16 py-8 md:py-12 mt-8">
+            <h1 class="text-2xl md:text-5xl lg:text-5xl font-[poppinsregular] text-center mb-12">Terms and Conditions for ZappQ</h1>
+            
+            <div class="max-w-6xl mx-auto space-y-8 font-[poppinsregular]">
+                <!-- Effective Date -->
+                <div class="flex items-center gap-2 text-xl">
+                    <span class="font-[poppinsregular] font-bold">Effective Date :</span>
+                    <span class="text-[#1DEE7B]">[ Date]</span>
+                </div>
+
+                <!-- Section 1 -->
+                <div class="space-y-4">
+                    <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">1. How do I book an appointment with a doctor on ZappQ?</h2>
+                    <p class="text-[#121514]   lg:text-lg max-w-[70rem] leading-relaxed">
+                        These Terms and Conditions govern the use of the Platform, which includes the website, mobile applications, and any related services provided by ZappQ. By accessing or using the Platform, you acknowledge that you have read, understood, and agree to these Terms and Conditions, including the Privacy Policy.
+                    </p>
+                </div>
+
+                <!-- Section 2 -->
+                <div class="space-y-4">
+                    <h2 class="text-lg font-[poppinsregular] font-bold mb-4">2. Definitions</h2>
+                    <ul class="space-y-6 text-[#121514]">
+                        <li class="flex flex-col md:flex-row gap-2 md:gap-4 lg:-space-x-10 items-start">
+                            <div class="flex gap-2 md:w-[140px] items-start">
+                                <span class="text-[#1DEE7B] text-2xl">•</span>
+                                <span class=" lg:text-lg font-[poppinsregular] font-bold">Platform :</span>
+                            </div>
+                            <span class="font-[poppinsregular] text-sm md:text-base lg:text-lg pl-8 md:pl-0">The ZappQ website and mobile application, through which healthcare services are provided.</span>
+                        </li>
+                        <li class="flex flex-col md:flex-row gap-2 md:gap-4 lg:-space-x-20 items-start">
+                            <div class="flex gap-2 md:w-[140px] items-start">
+                                <span class="text-[#1DEE7B] text-2xl">•</span>
+                                <span class="lg:text-lg font-[poppinsregular] font-bold">User :</span>
+                            </div>
+                            <span class="font-[poppinsregular] text-sm md:text-base lg:text-lg pl-8 md:pl-0">Any person or entity accessing or using the Platform, including both End-Users and Practitioners.</span>
+                        </li>
+                        <li class="flex flex-col md:flex-row gap-2 md:gap-4 lg:-space-x-10 items-start">
+                            <div class="flex gap-2 md:w-[140px] items-start">
+                                <span class="text-[#1DEE7B] text-2xl">•</span>
+                                <span class="lg:text-lg font-[poppinsregular] font-bold">End-User :</span>
+                            </div>
+                            <span class="font-[poppinsregular] text-sm md:text-base lg:text-lg pl-8 md:pl-0">A person seeking medical consultation through the Platform (i.e., patients).</span>
+                        </li>
+                        <li class="flex flex-col md:flex-row gap-2 md:gap-4 lg:-space-x-5 items-start">
+                            <div class="flex gap-2 md:w-[140px] items-start">
+                                <span class="text-[#1DEE7B] text-2xl">•</span>
+                                <span class="lg:text-lg font-[poppinsregular] font-bold">Practitioner :</span>
+                            </div>
+                            <span class="font-[poppinsregular] text-sm md:text-base lg:text-lg pl-8 md:pl-0">A healthcare provider such as a doctor, clinic, hospital, or healthcare facility, listed on the Platform.</span>
+                        </li>
+                        <li class="flex flex-col md:flex-row gap-2 md:gap-4 lg:-space-x-4 items-start">
+                            <div class="flex gap-2 md:w-[140px] items-start">
+                                <span class="text-[#1DEE7B] text-2xl">•</span>
+                                <span class="lg:text-lg font-[poppinsregular] font-bold">Services :</span>
+                            </div>
+                            <span class="font-[poppinsregular] text-sm md:text-base lg:text-lg pl-8 md:pl-0">Any medical or healthcare services offered through the Platform, including consultation, appointment booking, prescription management, etc.</span>
+                        </li>
+                    </ul>
+                </div>
+                 <!-- Section 3 -->
+    <div class="space-y-4">
+        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">3. Eligibility</h2>
+        <p class="text-[#121514] lg:text-lg max-w-[70rem] leading-relaxed">
+            You must be at least 18 years of age or older to access and use the Platform. By accessing or using the Platform, you represent and warrant that you are at least 18 years of age and have the legal capacity to enter into these Terms.
+        </p>
+        </div>
+    
+     <!-- Section 4 -->
+     <div class="space-y-4">
+        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">4. Account Registration</h2>
+        <p class="text-[#121514] lg:text-lg max-w-[70rem] leading-relaxed">
+            To use certain features of the Platform, you must create an account. You are solely responsible for maintaining the confidentiality of your account details, including your username and password. If you suspect unauthorized access or use of your account, you must immediately notify ZappQ.
+        </p>
+     </div>
+    
+     <!-- Section 5 -->
+     <div class="space-y-4">
+        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">5. Services Provided by ZappQ</h2>
+        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">5.1 Healthcare</h2>
+        <p class="text-[#121514] lg:text-lg max-w-[70rem] leading-relaxed">
+            ZappQ provides a platform for patients to consult with healthcare professionals. You can book consultations with doctors, specialists, and other medical practitioners through the Platform, either in person or via telemedicine (video call, phone call, etc.). ZappQ does not provide medical services directly and is not responsible for any medical diagnosis or treatment provided by Practitioners.
+        </p>
+        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">5.2 Appointment Booking</h2>
+        <p class="text-[#121514] lg:text-lg max-w-[70rem] leading-relaxed">
+            Users can search for Practitioners based on their specialty, location, and availability. Once a Practitioner is selected, Users can book an appointment through the Platform. Practitioners are required to confirm or deny the appointment based on their availability.
+        </p>
+        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">5.3 Payment for Services</h2>
+        <p class="text-[#121514]  lg:text-lg max-w-[70rem] leading-relaxed">
+            End-Users will be required to pay for medical consultations at the time of booking or during the consultation. Payments can be made via credit card, debit card, net banking, or other supported methods as outlined on the Platform.
+        </p> 
+     </div>
+
+     <!-- Section 6 -->
+     <div class="space-y-6">
+         <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">6. Responsibilities of the Users</h2>
+         
+         <!-- Section 6.1 -->
+         <div class="space-y-4">
+             <h3 class="text-lg text-[#121514] font-[poppinsregular] font-bold ml-4">6.1 End-Users (Patients)</h3>
+             <ul class="space-y-4 ml-8">
+                 <li class="flex gap-4 items-start">
+                     <span class="text-2xl">•</span>
+                     <span class="font-[poppinsregular] text-[#121514] lg:text-lg">You agree to provide true, accurate, and complete information during the registration process and when booking consultations.</span>
+                 </li>
+                 <li class="flex gap-4 items-start">
+                     <span class="text-2xl">•</span>
+                     <span class="font-[poppinsregular] text-[#121514] lg:text-lg">You are responsible for following any advice, instructions, or treatment plans provided by the Practitioner.</span>
+                 </li>
+                 <li class="flex gap-4 items-start">
+                     <span class="text-2xl">•</span>
+                     <span class="font-[poppinsregular] text-[#121514] lg:text-lg">You will attend the consultation on time and notify the Practitioner in case of cancellations or delays.</span>
+                 </li>
+             </ul>
+         </div>
+
+         <!-- Section 6.2 -->
+         <div class="space-y-4">
+             <h3 class="text-lg text-[#121514] font-[poppinsregular] font-bold ml-4">6.2 Practitioners</h3>
+             <ul class="space-y-4 ml-8">
+                 <li class="flex gap-4 items-start">
+                     <span class="text-2xl">•</span>
+                     <span class="font-[poppinsregular] text-[#121514] lg:text-lg">You agree to provide accurate information regarding your qualifications, experience, and availability.</span>
+                 </li>
+                 <li class="flex gap-4 items-start">
+                     <span class="text-2xl">•</span>
+                     <span class="font-[poppinsregular] text-[#121514] lg:text-lg">You are solely responsible for the medical services provided to the patients, including diagnosis, treatment, and prescriptions. ZappQ is not liable for any medical malpractice or negligence on the part of Practitioners.</span>
+                 </li>
+                 <li class="flex gap-4 items-start">
+                     <span class="text-2xl">•</span>
+                     <span class="font-[poppinsregular] text-[#121514] lg:text-lg">You agree to respond to appointment requests in a timely manner and provide consultations as per the agreed terms.</span>
+                 </li>
+             </ul>
+         </div>
+     
+
+      <!-- Section 7 -->
+      <div class="space-y-6">
+        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">7. Platform Usage and Restrictions</h2>
+        
+        <!-- Section 7.1 -->
+        <div class="space-y-4">
+            <h3 class="text-lg text-[#121514] font-[poppinsregular] font-bold ml-4">You agree not to:</h3>
+            <ul class="space-y-4 ml-8">
+                <li class="flex gap-4 items-start">
+                    <span class="text-2xl">•</span>
+                    <span class="font-[poppinsregular] text-[#121514] lg:text-lg">Use the Platform for any unlawful purpose.</span>
+                </li>
+                <li class="flex gap-4 items-start">
+                    <span class="text-2xl">•</span>
+                    <span class="font-[poppinsregular] text-[#121514] lg:text-lg">Attempt to gain unauthorized access to any part of the Platform or interfere with the functioning of the Platform.</span>
+                </li>
+                <li class="flex gap-4 items-start">
+                    <span class="text-2xl">•</span>
+                    <span class="font-[poppinsregular] text-[#121514] lg:text-lg">Post, transmit, or distribute any content that is illegal, abusive, defamatory, or otherwise objectionable.</span>
+                </li>
+                <li class="flex gap-4 items-start">
+                    <span class="text-2xl">•</span>
+                    <span class="font-[poppinsregular] text-[#121514] lg:text-lg">Engage in any activity that could damage, disable, or overburden the Platform.</span>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+
+     <!-- Section 8 -->
+     <div class="space-y-4">
+        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">8. Intellectual Property Rights</h2>
+        <p class="text-[#121514] lg:text-lg max-w-[70rem] leading-relaxed">
+            All content available on the Platform, including text, graphics, logos, images, software, and other materials, is the property of ZappQ or its licensors and is protected by intellectual property laws.
+        </p>
+     </div>
+
+      <!-- Section 9 -->
+      <div class="space-y-4">
+        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">9. Privacy and Data Protection</h2>
+        <p class="text-[#121514] lg:text-lg max-w-[70rem] leading-relaxed">
+            ZappQ respects your privacy and is committed to protecting your personal information. The use of personal information is governed by the Privacy Policy, which outlines how we collect, store, and protect your data.
+        </p>
+     </div>
+
+      <!-- Section 10 -->
+      <div class="space-y-4">
+        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">10. Fees, Cancellations, and Refunds</h2>
+        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">10.1 Fees</h2>
+        <p class="text-[#121514] lg:text-lg max-w-[70rem] leading-relaxed">
+            ZappQ does not charge any additional fees for using the Platform to book consultations. However, Practitioners may charge for their services. These fees are disclosed before booking.
+        </p>
+        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">10.2 Cancellations</h2>
+        <p class="text-[#121514] lg:text-lg max-w-[70rem] leading-relaxed">
+            You can cancel your appointment with the Practitioner through the Platform. Practitioners may have their own cancellation policies, which will be disclosed when booking the appointment.
+        </p>
+        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">10.3 Refunds</h2>
+        <p class="text-[#121514] lg:text-lg max-w-[70rem] leading-relaxed">
+            If the Practitioner cancels the appointment or fails to attend the consultation, a refund will be issued to the User. Refunds for no-show appointments may be handled at the Practitioner's discretion.
+        </p> 
+     </div>
+
+      <!-- Section 11 -->
+      <div class="space-y-4">
+        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">11. Limitation of Liability</h2>
+        <p class="text-[#121514] lg:text-lg max-w-[70rem] leading-relaxed">
+            ZappQ does not provide medical advice or services directly. We are not responsible for the quality of the healthcare services provided by Practitioners or any damages arising from the use of the Platform.
+        </p>
+     </div>
+
+      <!-- Section 12 -->
+      <div class="space-y-4">
+        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">12. Termination</h2>
+        <p class="text-[#121514] lg:text-lg max-w-[70rem] leading-relaxed">
+            ZappQ reserves the right to terminate or suspend your access to the Platform if you violate any terms of this Agreement or if we believe you are engaging in activities that are harmful to the integrity of the Platform.
+        </p>
+     </div>
+
+      <!-- Section 13 -->
+      <div class="space-y-4">
+        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">13. Governing Law and Dispute Resolution</h2>
+        <p class="text-[#121514] lg:text-lg max-w-[70rem] leading-relaxed">
+            These Terms shall be governed by the laws of [Your Country]. Any disputes arising out of or in connection with these Terms will be resolved through arbitration under the rules of [Arbitration Organization].
+        </p>
+     </div>
+
+      <!-- Section 14 -->
+      <div class="space-y-4">
+        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">14. Amendments</h2>
+        <p class="text-[#121514] lg:text-lg max-w-[70rem] leading-relaxed">
+            ZappQ reserves the right to modify or update these Terms at any time. Any changes will be posted on the Platform, and the new version will take effect immediately upon posting.
+        </p>
+     </div>
+
+     <!-- Section 15 -->
+     <div class="space-y-6">
+        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">15. Contact us</h2>
+        
+      
+        <div class="space-y-4">
+            <h3 class="text-lg text-[#121514] font-[poppinsregular] font-bold ml-4">For any questions or concerns regarding these Terms, please contact us at:</h3>
+            <ul class="space-y-4 text-black lg:text-lg">
+                <li class="flex gap-4 items-start">
+                    <span class=" text-2xl">•</span>
+                    <div class="flex gap-2">
+                        <span class="font-[poppinsregular] font-bold font-bold">Email:</span>
+                        <span class="font-[poppinsregular]">support@zappq.com</span>
+                    </div>
+                </li>
+                <li class="flex gap-4 items-start">
+                    <span class=" text-2xl">•</span>
+                    <div class="flex gap-2">
+                        <span class="font-[poppinsregular] font-bold font-bold">Phone :</span>
+                        <span class="font-[poppinsregular]">+91 7558995555</span>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+    </body>
+
+   
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.navbar-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
