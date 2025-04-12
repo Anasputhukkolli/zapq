@@ -3,9 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zapq</title>
+    <title>Zappq</title>
+    <link rel="stylesheet" href="./assets/css/font.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+    
 </head>
 <body>
+     <nav class="sticky top-10 z-10 flex items-center justify-between p-3 max-w-[80rem] mx-auto bg-transparent backdrop-blur-md shadow-xs rounded-full">
+        <div class="flex items-center">
+            <img src="./assets/images/logo.png" alt="Logo" class="h-10 md:h-16 mr-3">
+            <span class="text-[1.2rem] md:text-[1.7rem] font-medium font-[michromaregular]">ZappQ</span>
+        </div>
+        <div class="menu-icon relative -left-10 md:hidden" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars text-2xl"></i>
+        </div>
+        <ul class="hidden md:flex justify-center space-x-8 font-[poppinsregular] navbar-menu cursor-pointer ">
+            <li><a id="home" class="text-gray-700 hover:text-black ">Home</a></li>
+            <li><a id="about" class="text-gray-700 hover:text-black ">About</a></li>
+            <li><a id="feature" class="text-gray-700 hover:text-black ">Feature</a></li>
+            <li><a id="contact" class="text-gray-700 hover:text-black ">Contact</a></li>
+            <li><button class="md:hidden bg-black text-white px-6 font-semibold font-[poppinsmedium] py-3 rounded-full hover:bg-gray-800 cursor-pointer">Get started</button>
+            </li>
+        </ul>
+        <button class="hidden md:inline-block bg-black text-white px-6 font-semibold font-[poppinsmedium] py-3 rounded-full hover:bg-gray-800 ">Get started</button>
+    </nav>
+
     
+    <section class="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-[3.5rem] lg:px-[6rem] top-10 relative">
+        <div class="max-w-2xl md:top-5 relative md:left-4 ">
+            <h1 class="text-[2.5rem] md:text-[2.6rem] lg:text-[3.5rem] font-[michromaregular] text-[#1DEE7B] mb-2">Skip The Queue</h1>
+            <h2 class="text-4xl md:text-5xl font-[michromaregular] mb-6">Book Your Appointment</h2>
+            <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-xl">Tired of waiting in long queues to book a doctor's appointment? With our app, you can schedule your consultation anytime, anywhere in just a few clicks.</p>
+            <button class="bg-black text-white px-6 py-3 rounded-full flex items-center space-x-2 hover:bg-gray-800">
+                <i class="fa-solid fa-circle-play"></i>
+                <span>Check out ZappQ</span>
+            </button>
+            <div class="flex space-x-8 mt-8">
+                <div class="text-center">
+                    <p class="text-base md:text-2xl font-bold">200+</p>
+                    <p class="text-sm text-gray-600">Doctors</p>
+                </div>
+                <div class="text-center">
+                    <p class="md:text-2xl font-bold">15+</p>
+                    <p class=" text-sm text-gray-600">Hard worker's</p>
+                </div>
+                <div class="text-center">
+                    <p class="md:text-2xl font-bold">24/7</p>
+                    <p class="text-sm text-gray-600">Hours of support</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 md:mt-0 md:left-16 lg:left-6 relative">
+            <img src="./assets/images/mockup.png" alt="App Preview" class="w-full  md:w-[30rem] lg:w-[46rem] max-w-lg md:max-w-[50rem]">
+        </div>
+    </section>
+    <div class="text-center   text-[1rem] md:text-[1.3rem]  font-[poppinsmedium] text-[#5D6561] relative top-[4.9rem] md:top-[7.1rem] lg:top-[2.6rem] ">Trusted by leaders in the industry</div>
+   
+<div class="flex justify-center space-x-2 max-w-[20rem] md:max-w-[32rem] lg:max-w-[30rem] mx-auto md:space-x-10 lg:space-x-8 mt-28  md:mt-40 lg:mt-24 md:-mb-8 lg:-mb-20 ">
+    <div class="bg-[#D9D9D9] p-4 rounded-lg" style="filter: brightness(114%);">
+        <img src="./assets/images/logi.png" alt="Logo 1" class="h-5 md:h-7">
+    </div>
+    <div class="bg-[#D9D9D9] p-4 rounded-lg" style="filter: brightness(114%);">
+        <img src="./assets/images/logispium.png" alt="Logo 2" class="h-5 md:h-7">
+    </div>
+    <div class="bg-[#D9D9D9] p-4 rounded-lg" style="filter: brightness(114%);">
+        <img src="./assets/images/ipsm.png" alt="Logo 3" class="h-5 md:h-7">
+    </div>
+</div>
+
+<section class="flex flex-col md:flex-row justify-between items-start p-24 md:p-40 lg:p-44 space-y-10 md:space-y-0 md:space-x-16 lg:space-x-8 relative -mb-10 md:-mb-3 lg:-mb-28" id="about">
+    <div class="text-center max-w-xs md:border-r md:border-gray-300 md:pr-9 hover-effect  ">
+        <div class="bg-[#1DEE7B] rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-4 icon-circle">
+            <i class="fa-solid fa-calendar text-white text-2xl md:text-3xl icon"></i>
+        </div>
+        <h3 class="text-lg md:text-xl font-[poppinsmedium] mb-2 max-w-[10rem]">Smart Doctor Booking</h3>
+        <p class=" md:text-gray-600 font-[poppinsregular]  max-w-[10rem]  ">Find doctors by specialization, location, and availability, then book instantly. Get a token and real-time updates for a seamless experience.</p>
+    </div>
+    <div class="text-center max-w-xs md:border-r md:border-gray-300 md:pr-9 hover-effect">
+        <div class="bg-[#1DEE7B] rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-4 icon-circle">
+            <i class="fa-solid fa-hourglass-half text-white text-2xl md:text-3xl icon"></i>
+        </div>
+        <h3 class="text-lg md:text-xl font-[poppinsmedium] mb-2 max-w-[10rem]">Real-Time Queue Tracking</h3>
+        <p class=" md:text-gray-600 font-[poppinsregular] max-w-[10rem]">ZappQ keeps you updated with live token tracking. Monitor your wait time, get notifications, and stay informed—no more long waits or uncertainty!</p>
+    </div>
+    <div class="text-center max-w-xs md:border-r md:border-gray-300 md:pr-9 hover-effect">
+        <div class="bg-[#1DEE7B] rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-4 icon-circle">
+            <i class="fa-solid fa-robot text-white text-2xl md:text-3xl icon"></i>
+        </div>
+        <h3 class="text-lg md:text-xl font-[poppinsmedium] mb-2 max-w-[10rem]">AI Symptom Checker</h3>
+        <p class=" md:text-gray-600 font-[poppinsregular] max-w-[10rem]">ZappQ's AI chatbot analyzes symptoms instantly, providing quick health insights and guidance before you consult a doctor.</p>
+    </div>
+    <div class="text-center max-w-xs hover-effect">
+        <div class="bg-[#1DEE7B] rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-4 icon-circle">
+            <i class="fa-solid fa-file-medical text-white text-2xl md:text-3xl icon"></i>
+        </div>
+        <h3 class="text-lg md:text-xl font-[poppinsmedium] mb-2 max-w-[10rem]">Smart Health Records</h3>
+        <p class=" md:text-gray-600 font-[poppinsregular] max-w-[10rem]">ZappQ securely stores medical records and appointment details, ensuring easy access while maintaining privacy and compliance with security standards.</p>
+    </div>
+</section>
+
+<section class="px-[3rem] md:px-[3rem] lg:px-[3rem] lg:px-[10rem] mb-10" id="feature">
+    <p class="text-gray-600 md:text-[1.35rem] lg:text-[1.35rem] font-medium text-justify font-[poppinsregular]">
+        <span class="text-[#FF0000]">*</span>ZappQ revolutionizes healthcare access with seamless doctor booking, real-time token updates, and AI-driven symptom analysis. Patients can easily find doctors, schedule appointments, and track their wait times, ensuring a smooth and efficient experience. With secure digital records, ZappQ simplifies medical data management while prioritizing privacy and security.
+    </p>
+</section>
+
+<section class="relative w-full h-[35rem] md:h-[40rem] lg:h-[28.7rem] top-[8rem] md:top-[12rem] lg:top-[18rem] mb-[8rem] md:mb-[16rem] lg:mb-[24rem] bg-contain md:bg-contain lg:bg-cover bg-center bg-no-repeat px-4" style="background-image: url('./assets/images/bgcurve.svg');">
+    <div class="container mx-auto px-4 md:px-4 lg:px-16 -top-[3rem] md:-top-[6rem] lg:-top-[10rem] relative flex flex-col md:flex-row items-center justify-between">
+        <!-- Left side content -->
+        <div class="w-full md:w-[59%] lg:w-[54.5%] text-left mb-8 md:mb-0 relative md:-left-12 lg:left-10 -top-[2rem] md:top-0">
+            <div class="space-x-2  mb-4 font-[poppinsregular] flex flex-wrap gap-2">
+                <span class="text-base md:text-[1.35rem] lg:text-xl text-[#1DEE7B]">#easyHealthcare</span>
+                <span class="text-base md:text-[1.35rem] lg:text-xl text-[#1DEE7B]">#SmartBooking</span>
+                <span class="text-base md:text-[1.35rem] lg:text-xl text-[#1DEE7B]">#RealTimeUpdates</span>
+            </div>
+            <p class="text-gray-600 text-base md:text-xl lg:text-xl mb-6 md:max-w-lg lg:max-w-2xl font-[poppinsregular]">
+                using zappq is simple and hassle-free. browse doctors by specialization, location, or availability, then book an appointment in seconds. get a virtual token, track your queue position in real time, and receive notifications when it's your turn. with ai-powered assistance and secure digital records, managing healthcare has never been easier!
+            </p>
+            <div class="text-xl md:text-4xl lg:text-[3.4rem] top-[0.6rem] md:top-[4rem] lg:top-[7rem] relative font-[poppinsregular] mb-4 space-y-2 lg:space-y-7">
+                <p>INSIGHT: NAVIGATE YOUR</p>
+                <p>HEALTH WITH EASE</p>
+            </div>
+        </div>
+
+        <!-- Right side video and floating boxes -->
+        <div class="w-full md:w-[48%] lg:w-1/2 relative md:left-14 lg:left-10 mt-4 md:mt-0 -top-[2rem] md:-top-12 lg:top-14">
+            <!-- Video container -->
+            <div class="relative bg-[#E5E5E5] rounded-[1rem] md:rounded-[1.2rem] lg:rounded-[1.5rem] overflow-hidden aspect-video w-full md:w-full lg:w-[35rem] h-[12rem] md:h-[25rem] lg:h-[31rem] md:right-0 lg:-right-6">
+                <video class="w-full h-full object-cover" poster="./assets/images/video-thumb.jpg">
+                    <source src="./assets/video/demo.mp4" type="video/mp4">
+                </video>
+                <button class="absolute inset-0 flex items-center justify-center">
+                    <i class="fa-solid fa-play text-3xl md:text-4xl text-white"></i>
+                </button>
+            </div>
+
+            <!-- Floating appointment box -->
+            <div class="absolute top-8 -right-4 md:top-16 md:-right-10 lg:top-20 lg:-right-0 bg-white rounded-[0.8rem] md:rounded-[1rem] lg:rounded-[1.2rem] shadow-lg md:shadow-xl hover:shadow-xl md:hover:shadow-2xl transition-shadow duration-300">
+                <button class="text-[#1DEE7B] font-[poppinsmedium] text-xs md:text-base lg:text-lg px-3 md:px-4 lg:px-6 py-2 md:py-3 lg:py-5 flex items-center">
+                    Get a Appointment
+                </button>
+            </div>
+
+            <!-- Floating rating box -->
+            <div class="absolute -bottom-3 -left-4 md:-bottom-4 md:-left-16 lg:-bottom-6 lg:-left-6 bg-white rounded-[0.8rem] md:rounded-[0.9rem] lg:rounded-[1rem] shadow-lg md:shadow-xl px-4 md:px-4 lg:px-6 py-1 md:py-2 flex items-start space-x-2 md:space-x-3 lg:space-x-4 scale-75 md:scale-90 lg:scale-100">
+                <div class="flex flex-col">
+                    <div class="flex items-center">
+                        <span class="text-xl md:text-3xl font-bold">4.4</span>
+                        <i class="fa-solid fa-star text-[#FFA500] ml-1 text-sm md:text-base"></i>
+                    </div>
+                    <span class="text-[10px] md:text-sm text-gray-500">32 reviews</span>
+                </div>
+                <div class="flex flex-col space-y-1">
+                    <div class="flex items-center space-x-1 md:space-x-2">
+                        <span class="text-[8px] md:text-xs w-2 md:w-3">5</span>
+                        <div class="w-16 md:w-32 bg-gray-200 rounded-full h-1 md:h-2">
+                            <div class="bg-[#1DEE7B] h-1 md:h-2 rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-1 md:space-x-2">
+                        <span class="text-[8px] md:text-xs w-2 md:w-3">4</span>
+                        <div class="w-16 md:w-32 bg-gray-200 rounded-full h-1 md:h-2">
+                            <div class="bg-[#1DEE7B] h-1 md:h-2 rounded-full" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-1 md:space-x-2">
+                        <span class="text-[8px] md:text-xs w-2 md:w-3">3</span>
+                        <div class="w-16 md:w-32 bg-gray-200 rounded-full h-1 md:h-2">
+                            <div class="bg-[#1DEE7B] h-1 md:h-2 rounded-full" style="width: 40%"></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-1 md:space-x-2">
+                        <span class="text-[8px] md:text-xs w-2 md:w-3">2</span>
+                        <div class="w-16 md:w-32 bg-gray-200 rounded-full h-1 md:h-2">
+                            <div class="bg-[#1DEE7B] h-1 md:h-2 rounded-full" style="width: 20%"></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-1 md:space-x-2">
+                        <span class="text-[8px] md:text-xs w-2 md:w-3">1</span>
+                        <div class="w-16 md:w-32 bg-gray-200 rounded-full h-1 md:h-2">
+                            <div class="bg-[#1DEE7B] h-1 md:h-2 rounded-full" style="width: 10%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector('.navbar-menu');
+        menu.classList.toggle('active');
+    }
+
+    // Add smooth scrolling functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all navigation links
+        const homeLink = document.getElementById('home');
+        const aboutLink = document.getElementById('about');
+        const featureLink = document.getElementById('feature');
+
+        // Add click event listeners
+        homeLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            // Close mobile menu if open
+            const menu = document.querySelector('.navbar-menu');
+            menu.classList.remove('active');
+        });
+
+        aboutLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            const aboutSection = document.querySelector('section#about');
+            aboutSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+            // Close mobile menu if open
+            const menu = document.querySelector('.navbar-menu');
+            menu.classList.remove('active');
+        });
+
+        featureLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            const featureSection = document.querySelector('section#feature');
+            featureSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+            // Close mobile menu if open
+            const menu = document.querySelector('.navbar-menu');
+            menu.classList.remove('active');
+        });
+    });
+</script>
 </body>
 </html>
+
+
+
