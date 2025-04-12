@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zappq</title>
+    <link rel="stylesheet" href="./assets/css/font.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[url('./assets/images/bgdesign.svg')] bg-no-repeat bg-cover min-h-screen bg-fixed">
+    <div class="min-h-screen ">
+     <nav class="sticky top-10 z-10 flex items-center justify-between p-3 max-w-[80rem] mx-auto bg-transparent backdrop-blur-md shadow-xs rounded-full">
+        <div class="flex items-center cursor-pointer" onclick="window.location.reload()">
+            <img src="./assets/images/logo.png" alt="Logo" class="h-10 md:h-16 mr-3">
+            <span class="text-[1.2rem] md:text-[1.7rem] font-medium font-[michromaregular]">ZappQ</span>
+        </div>
+        <div class="menu-icon relative -left-10 md:hidden" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars text-2xl"></i>
+        </div>
+        <ul class="hidden md:flex justify-center space-x-8 font-[poppinsregular] navbar-menu cursor-pointer ">
+            <li><a id="home" class="text-gray-700 hover:text-black ">Home</a></li>
+            <li><a id="about" class="text-gray-700 hover:text-black ">About</a></li>
+            <li><a id="feature" class="text-gray-700 hover:text-black ">Feature</a></li>
+            <li><a id="contact" class="text-gray-700 hover:text-black ">Contact</a></li>
+            <li><button class="md:hidden bg-black text-white px-6 font-semibold font-[poppinsmedium] py-3 rounded-full hover:bg-gray-800 cursor-pointer">Get started</button>
+            </li>
+        </ul>
+            <button class="hidden md:inline-block bg-black text-white px-6 font-semibold font-[poppinsmedium] py-3 rounded-full hover:bg-gray-800 ">Get started</button>
+        </nav>
+        
+        <!-- Terms and Conditions Content -->
+        <div class="container mx-auto px-4 md:px-8 lg:px-16 py-8 md:py-12 mt-8">
+            <h1 class="text-2xl md:text-5xl lg:text-5xl font-[poppinsregular] text-center mb-12">Privacy Policy for ZappQ</h1>
+            
+            <div class="max-w-6xl mx-auto space-y-8 font-[poppinsregular]">
+                <!-- Effective Date -->
+                <div class="flex items-center gap-2 text-lg md:text-xl">
+                    <span class="font-[poppinsregular] font-bold">Effective Date :</span>
+                    <span class="text-[#1DEE7B]">[ Date]</span>
+                </div>
+
+                <div class="max-w-6xl relative top-5
+                 mx-auto space-y-8 font-[poppinsregular]">
+                    <!-- welcone -->
+                    <div class="flex items-center gap-2 text-lg md:text-xl">
+                        <span class="font-[poppinsregular] font-bold">Welcome to :</span>
+                        <span class="text-[#1DEE7B]">ZappQ</span>
+                    </div>
+
+
+                    <p class="text-[#121514] text-base md:text-lg leading-relaxed">
+                        At ZappQ, your privacy is our priority. This Privacy Policy outlines how we collect, use, and protect your personal information when you use our app and services. By using ZappQ, you agree to the practices described in this policy.
+                    </p>
+    
+                    <!-- Section 1: Information We Collect -->
+                    <div class="space-y-6">
+                        <h2 class="text-lg font-[poppinsregular] font-bold text-[#121514]">1. Information We Collect</h2>
+    
+                        <!-- Personal Information -->
+                        <div class="ml-4 space-y-4">
+                            <h3 class="text-lg font-[poppinsregular] font-bold text-[#121514]">a. Personal Information:</h3>
+                            <ul class="space-y-3 ml-8">
+                                <li class="flex gap-4 items-start">
+                                    <span class="text-black text-2xl">•</span>
+                                    <span class="text-[#121514] lg:text-lg">Name, email address, phone number, and other contact details.</span>
+                                </li>
+                                <li class="flex gap-4 items-start">
+                                    <span class="text-black text-2xl">•</span>
+                                    <span class="text-[#121514] lg:text-lg">Medical records, health data, or any documents uploaded through the app.</span>
+                                </li>
+                                <li class="flex gap-4 items-start">
+                                    <span class="text-black text-2xl">•</span>
+                                    <span class="text-[#121514] lg:text-lg">Appointment details and schedules.</span>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <!-- Device Information -->
+                        <div class="ml-4 space-y-4">
+                            <h3 class="text-lg font-[poppinsregular] font-bold text-[#121514]">b. Device Information:</h3>
+                            <ul class="space-y-3 ml-8">
+                                <li class="flex gap-4 items-start">
+                                    <span class="text-black text-2xl">•</span>
+                                    <span class="text-[#121514] lg:text-lg">Device type, operating system, and unique device identifiers.</span>
+                                </li>
+                                <li class="flex gap-4 items-start">
+                                    <span class="text-black text-2xl">•</span>
+                                    <span class="text-[#121514] lg:text-lg">IP address, browser type, and usage statistics.</span>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <!-- Payment Information -->
+                        <div class="ml-4 space-y-4">
+                            <h3 class="text-lg font-[poppinsregular] font-bold text-[#121514]">c. Payment Information:</h3>
+                            <ul class="space-y-3 ml-8">
+                                <li class="flex gap-4 items-start">
+                                    <span class="text-black text-2xl">•</span>
+                                    <span class="text-[#121514] lg:text-lg">Billing details for services (processed through third-party payment gateways).</span>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <!-- Location Information -->
+                        <div class="ml-4 space-y-4">
+                            <h3 class="text-lg font-[poppinsregular] font-bold text-[#121514]">d. Location Information:</h3>
+                            <ul class="space-y-3 ml-8">
+                                <li class="flex gap-4 items-start">
+                                    <span class="text-black text-2xl">•</span>
+                                    <span class="text-[#121514] lg:text-lg">If enabled, we may collect location data to provide nearby hospital/doctor recommendations.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Section 2:  -->
+                    <div class="space-y-6">
+                        <h2 class="text-lg font-[poppinsregular] font-bold text-[#121514]">2. How We Use Your Information</h2>
+                        
+                        <p class="text-[#121514]  lg:text-lg ml-4">We use your information to:</p>
+                        
+                        <ul class="space-y-3 ml-8">
+                            <li class="flex gap-4 items-start">
+                                <span class="text-black text-2xl">•</span>
+                                <span class="text-[#121514] lg:text-lg ">Provide healthcare services and manage your appointments.</span>
+                            </li>
+                            <li class="flex gap-4 items-start">
+                                <span class="text-black text-2xl">•</span>
+                                <span class="text-[#121514] lg:text-lg">Facilitate communication between patients and doctors/hospitals.</span>
+                            </li>
+                            <li class="flex gap-4 items-start">
+                                <span class="text-black text-2xl">•</span>
+                                <span class="text-[#121514] lg:text-lg">Store, update, and retrieve your medical documents securely.</span>
+                            </li>
+                            <li class="flex gap-4 items-start">
+                                <span class="text-black text-2xl">•</span>
+                                <span class="text-[#121514] lg:text-lg">Improve user experience and develop new features.</span>
+                            </li>
+                            <li class="flex gap-4 items-start">
+                                <span class="text-black text-2xl">•</span>
+                                <span class="text-[#121514] lg:text-lg">Send important updates, notifications, and promotional content (you can opt-out anytime).</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Section 3:  -->
+                    <div class="space-y-6">
+                        <h2 class="text-lg font-[poppinsregular] font-bold text-[#121514]">3. Sharing Your Information</h2>
+                        
+                        <p class="text-[#121514] lg:text-lg md:text-base ml-4">We do not sell, trade, or rent your personal information. We may share your data with:</p>
+                        
+                        <ul class="space-y-3 ml-8">
+                            <li class="flex gap-4 items-start">
+                                <span class="text-black text-2xl">•</span>
+                                <span class="text-[#121514] lg:text-lg md:text-base">Healthcare providers or hospitals involved in your care.</span>
+                            </li>
+                            <li class="flex gap-4 items-start">
+                                <span class="text-black text-2xl">•</span>
+                                <span class="text-[#121514] lg:text-lg md:text-base">Third-party service providers (e.g., payment processors or analytics tools) bound by confidentiality agreements.</span>
+                            </li>
+                            <li class="flex gap-4 items-start">
+                                <span class="text-black text-2xl">•</span>
+                                <span class="text-[#121514] lg:text-lg md:text-base">Authorities if required by law or to protect legal rights.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    
+
+                    <!-- Section 4 -->
+                    <div class="space-y-4">
+                        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">4. Data Security</h2>
+                        <p class="text-[#121514] lg:text-lg max-w-[70rem] leading-relaxed">
+                            We implement robust security measures to protect your data, including encryption, secure storage, and access controls. However, no system is 100% secure. Use ZappQ at your own discretion.
+                        </p>
+                    </div>
+
+                     <!-- Section 5: -->
+                     <div class="space-y-6">
+                        <h2 class="text-xl font-[poppinsregular] font-bold text-[#121514]">5. Your Rights</h2>
+                        
+                        <p class="text-[#121514] lg:text-lg ml-4">You have the right to:</p>
+                        
+                        <ul class="space-y-3 ml-8">
+                            <li class="flex gap-4 items-start">
+                                <span class="text-[#1DEE7B] text-2xl">•</span>
+                                <span class="text-[#121514] lg:text-lg">Access, update, or delete your personal information.</span>
+                            </li>
+                            <li class="flex gap-4 items-start">
+                                <span class="text-[#1DEE7B] text-2xl">•</span>
+                                <span class="text-[#121514] lg:text-lg">Withdraw consent for data processing (may limit app functionality).</span>
+                            </li>
+                            <li class="flex gap-4 items-start">
+                                <span class="text-[#1DEE7B] text-2xl">•</span>
+                                <span class="text-[#121514] lg:text-lg">File a complaint with a relevant authority if your rights are violated.</span>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <!-- Section 6 -->
+                    <div class="space-y-4">
+                        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">6. Data Retention</h2>
+                        <p class="text-[#121514] lg:text-lg max-w-[70rem] leading-relaxed">
+                            We retain your personal information for as long as necessary to provide our services or comply with legal obligations. Once no longer needed, we securely delete your data.
+                        </p>
+                    </div>
+
+                    <!-- Section 7 -->
+                    <div class="space-y-4">
+                        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">7. Third-Party Links</h2>
+                        <p class="text-[#121514] lg:text-lg max-w-[70rem] leading-relaxed">
+                            Our app may contain links to third-party websites or services. We are not responsible for their privacy practices. Please review their policies before sharing any data.
+                        </p>
+                    </div>
+
+                    <!-- Section 8 -->
+                    <div class="space-y-4">
+                        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">8. Changes to this Privacy Policy</h2>
+                        <p class="text-[#121514] lg:text-lg max-w-[70rem] leading-relaxed">
+                            We may update this policy periodically. We will notify you of significant changes through the app or other communication channels.
+                        </p>
+                    </div>
+
+                    <!-- Section 9 -->
+                    <div class="space-y-6">
+                        <h2 class="text-lg text-[#121514] font-[poppinsregular] font-bold">9. Contact us</h2>
+                        
+                        <div class="space-y-4">
+                            <h3 class="text-lg text-[#121514] font-[poppinsregular]  ml-4">If you have questions, concerns, or feedback regarding this Privacy Policy, please contact us at:</h3>
+                            <ul class="space-y-4 text-black lg:text-lg">
+                                <li class="flex gap-4 items-start">
+                                    <span class=" text-2xl">•</span>
+                                    <div class="flex gap-2">
+                                        <span class="font-[poppinsregular] font-bold font-bold">Email:</span>
+                                        <span class="font-[poppinsregular]">info@quadvare.com</span>
+                                    </div>
+                                </li>
+                                <li class="flex gap-4 items-start">
+                                    <span class=" text-2xl">•</span>
+                                    <div class="flex gap-2">
+                                        <span class="font-[poppinsregular] font-bold font-bold">Phone :</span>
+                                        <span class="font-[poppinsregular]">7558995555</span>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+
+   
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.navbar-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
