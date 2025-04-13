@@ -11,6 +11,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 
 
 
@@ -275,18 +279,127 @@
         </div>
     </section>
 
+    <section id="founders">
+        <section class="wrapper">
+            <div class="container mx-auto px-4 py-10">
+                <div class="main-container flex flex-wrap lg:flex-nowrap">
+                    <!-- Left Content Section -->
+                    <div class="content-section w-full lg:w-2/5 pr-0 lg:pr-12">
+                        <div class="content">
+                            <h1 class="text-5xl font-bold mb-6">
+                                MEET THE MINDS<br>
+                                BEHIND <span class="zappq-color">ZAPPQ</span>
+                            </h1>
+                            <p class="text-gray-600 text-lg mb-8">
+                                zappq is built by a passionate team of developers, healthcare experts, dedicated to making medical appointments seamless. our mission is to simplify healthcare access for both patients and doctors.
+                            </p>
+                        </div>
+                        
+                        <div class="nav-buttons">
+                            <button class="nav-button prev button-zappq">
+                                <i class="fas fa-arrow-left"></i>
+                            </button>
+                            <button class="nav-button next button-zappq">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Slider Section -->
+                    <div class="slider-section w-full lg:w-3/5">
+                        <div class="slider-container">
+                            <div class="slider">
+                                <!-- Slide 1: 6 team members -->
+                                <div class="slide">
+                                    <div class="team-grid">
+                                        <div class="team-member">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <h3 class="text-xl font-semibold">Ananya Verma</h3>
+                                            <p >CEO</p>
+                                        </div>
+                                        <div class="team-member">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <h3 class="text-xl font-semibold">Ananya Verma</h3>
+                                            <p >CEO</p>
+                                        </div>
+                                        <div class="team-member">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <h3 class="text-xl font-semibold">Ananya Verma</h3>
+                                            <p >CEO</p>
+                                        </div>
+                                        <div class="team-member">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <h3 class="text-xl font-semibold">Ananya Verma</h3>
+                                            <p >CEO</p>
+                                        </div>
+                                        <div class="team-member">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <h3 class="text-xl font-semibold">Ananya Verma</h3>
+                                            <p >CEO</p>
+                                        </div>
+                                        <div class="team-member">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <h3 class="text-xl font-semibold">Ananya Verma</h3>
+                                            <p >CEO</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Slide 2: Another 6 team members -->
+                                <div class="slide">
+                                    <div class="team-grid">
+                                        <div class="team-member">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <h3 class="text-xl font-semibold">Michael Chen</h3>
+                                            <p class="text-gray-500">CTO</p>
+                                        </div>
+                                        <div class="team-member">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <h3 class="text-xl font-semibold">Sarah Johnson</h3>
+                                            <p class="text-gray-500">Lead Developer</p>
+                                        </div>
+                                        <div class="team-member">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <h3 class="text-xl font-semibold">David Kim</h3>
+                                            <p class="text-gray-500">UX Designer</p>
+                                        </div>
+                                        <div class="team-member">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <h3 class="text-xl font-semibold">Priya Patel</h3>
+                                            <p class="text-gray-500">Medical Advisor</p>
+                                        </div>
+                                        <div class="team-member">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <h3 class="text-xl font-semibold">James Wilson</h3>
+                                            <p class="text-gray-500">Product Manager</p>
+                                        </div>
+                                        <div class="team-member">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <h3 class="text-xl font-semibold">Emma Garcia</h3>
+                                            <p class="text-gray-500">Marketing Director</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    
 
     <section id="testimonial">
         <section class="wrapper">
             <div class="top">
                 <h3>
                     hear what our users
-                    <!-- <span>
-                    <img src="./assets/images/Ellipse 7 (1).png" alt="">
-                    <img src="./assets/images/Ellipse 7 (1).png" alt="">
-                    <img src="./assets/images/Ellipse 7 (1).png" alt="">
-                    <img src="./assets/images/Ellipse 7 (1).png" alt="">
-                </span> -->
+                    <span>
+                        <img src="./assets/images/Ellipse 7 (1).png" alt="">
+                        <img src="./assets/images/Ellipse 7 (1).png" alt="">
+                        <img src="./assets/images/Ellipse 7 (1).png" alt="">
+                        <img src="./assets/images/Ellipse 7 (1).png" alt="">
+                    </span>
                     love about <b>ZappQ!</b>
                 </h3>
                 <p>real experiences, real impact! see how zappq has transformed healthcare access for our users. from
@@ -295,157 +408,93 @@
                 </p>
             </div>
             <div class="bottom">
-                <div class="container-fluid sponsor-slider" id="sponsorSlider">
-                    <div class="sponsor-track" id="sponsorTrack">
 
-                        <div class="sponsor">
-                            <h3>Booking Made Effortless!</h3>
-                            <div class="testimonial-quote">
-                                <p>"I used to struggle with appointment scheduling, but ZappQ makes it so simple! The
-                                    live updates are a lifesaver."</p>
-                            </div>
+                <div class="testimonial-slider">
+                    <!-- Testimonial 1 -->
+                    <div>
+                        <div class="testimonial-card">
+                            <h3 class="text-xl font-semibold mb-4">Booking Made Effortless!</h3>
+                            <p class="quote-text">"I used to struggle with appointment scheduling, but your platform
+                                makes it so simple! The live updates are a lifesaver."</p>
                             <div class="user-info">
-                                <div class="user-avatar">
-                                    <img src="./assets/images/Ellipse 7 (1).png" alt="Sneha Kapoor">
-                                </div>
+                                <img src="./assets/images/Ellipse 7 (1).png" alt="User Avatar" class="user-avatar">
                                 <div class="user-details">
-                                    <h4>Sneha Kapoor</h4>
-                                    <p>Marketing Executive</p>
+                                    <h4 class="font-bold">Sneha Kapoor</h4>
+                                    <p class="text-gray-600 text-sm">Marketing Executive</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="sponsor">
-                            <h3>Booking Made Effortless!</h3>
-                            <div class="testimonial-quote">
-                                <p>"I used to struggle with appointment scheduling, but ZappQ makes it so simple! The
-                                    live updates are a lifesaver."</p>
-                            </div>
-                            <div class="user-info">
-                                <div class="user-avatar">
-                                    <img src="./assets/images/Ellipse 7 (1).png" alt="Sneha Kapoor">
-                                </div>
-                                <div class="user-details">
-                                    <h4>Sneha Kapoor</h4>
-                                    <p>Marketing Executive</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="sponsor">
-                            <h3>Booking Made Effortless!</h3>
-                            <div class="testimonial-quote">
-                                <p>"I used to struggle with appointment scheduling, but ZappQ makes it so simple! The
-                                    live updates are a lifesaver."</p>
-                            </div>
-                            <div class="user-info">
-                                <div class="user-avatar">
-                                    <img src="./assets/images/Ellipse 7 (1).png" alt="Sneha Kapoor">
-                                </div>
-                                <div class="user-details">
-                                    <h4>Sneha Kapoor</h4>
-                                    <p>Marketing Executive</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sponsor">
-                            <h3>Booking Made Effortless!</h3>
-                            <div class="testimonial-quote">
-                                <p>"I used to struggle with appointment scheduling, but ZappQ makes it so simple! The
-                                    live updates are a lifesaver."</p>
-                            </div>
-                            <div class="user-info">
-                                <div class="user-avatar">
-                                    <img src="./assets/images/Ellipse 7 (1).png" alt="Sneha Kapoor">
-                                </div>
-                                <div class="user-details">
-                                    <h4>Sneha Kapoor</h4>
-                                    <p>Marketing Executive</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
                     </div>
 
-                    <!-- Indicator -->
+                    <!-- Testimonial 2 -->
+                    <div>
+                        <div class="testimonial-card">
+                            <h3 class="text-xl font-semibold mb-4">Smart & User-Friendly!</h3>
+                            <p class="quote-text">"Even my parents find your app easy to use! The AI symptom checker
+                                gives helpful insights before consulting a doctor."</p>
+                            <div class="user-info">
+                                <img src="./assets/images/Ellipse 7 (1).png" alt="User Avatar" class="user-avatar">
+                                <div>
+                                    <p class="font-bold">Ananya Verma</p>
+                                    <p class="text-gray-600 text-sm">College Student</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- Testimonial 3 -->
+                    <div>
+                        <div class="testimonial-card">
+                            <h3 class="text-xl font-semibold mb-4">Highly Secure & Reliable!</h3>
+                            <p class="quote-text">"Managing patient records has never been this easy. Your platform
+                                keeps everything secure and accessible anytime I need it."</p>
+                            <div class="user-info">
+                                <img src="./assets/images/Ellipse 7 (1).png" alt="User Avatar" class="user-avatar">
+                                <div>
+                                    <p class="font-bold">Dr. Priya Sharma</p>
+                                    <p class="text-gray-600 text-sm">Pediatrician</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div>
+                        <div class="testimonial-card">
+                            <h3 class="text-xl font-semibold mb-4">No More Long Waits!</h3>
+                            <p class="quote-text">"The real-time tracking is amazing! I can plan my visit perfectly
+                                instead of sitting in a waiting room for hours."</p>
+                            <div class="user-info">
+                                <img src="./assets/images/Ellipse 7 (1).png" alt="User Avatar" class="user-avatar">
+                                <div>
+                                    <p class="font-bold">Rajesh Iyer</p>
+                                    <p class="text-gray-600 text-sm">IT Consultant</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div>
+                        <div class="testimonial-card">
+                            <h3 class="text-xl font-semibold mb-4">Perfect for Specialists!</h3>
+                            <p class="quote-text">"As a specialist, I love how the platform helps me organize
+                                consultations and follow-ups with my patients across multiple hospitals."</p>
+                            <div class="user-info">
+                                <img src="./assets/images/Ellipse 7 (1).png" alt="User Avatar" class="user-avatar">
+                                <div>
+                                    <p class="font-bold">Dr. Amit Patel</p>
+                                    <p class="text-gray-600 text-sm">Cardiologist</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </section>
     </section>
-    <script>
-        const slider = document.getElementById("sponsorSlider");
-        const track = document.getElementById("sponsorTrack");
-        const indicator = document.getElementById("indicatorBar");
 
-        // Pause on hover
-        slider.addEventListener("mouseenter", () => {
-            track.classList.add("paused");
-            indicator.classList.add("indicator-paused");
-        });
-
-        slider.addEventListener("mouseleave", () => {
-            track.classList.remove("paused");
-            indicator.classList.remove("indicator-paused");
-        });
-
-        // Drag-to-slide logic
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-
-        slider.addEventListener("mousedown", (e) => {
-            isDown = true;
-            track.classList.add("paused");
-            indicator.classList.add("indicator-paused");
-            slider.classList.add("active");
-            startX = e.pageX - slider.offsetLeft;
-            scrollLeft = slider.scrollLeft;
-        });
-
-        slider.addEventListener("mouseleave", () => {
-            isDown = false;
-            slider.classList.remove("active");
-        });
-
-        slider.addEventListener("mouseup", () => {
-            isDown = false;
-            slider.classList.remove("active");
-        });
-
-        slider.addEventListener("mousemove", (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - slider.offsetLeft;
-            const walk = (x - startX) * 2; // scroll-fast
-            slider.scrollLeft = scrollLeft - walk;
-        });
-
-        // Touch support
-        let touchStartX = 0;
-        let touchScrollLeft = 0;
-
-        slider.addEventListener("touchstart", (e) => {
-            track.classList.add("paused");
-            indicator.classList.add("indicator-paused");
-            touchStartX = e.touches[0].pageX;
-            touchScrollLeft = slider.scrollLeft;
-        });
-
-        slider.addEventListener("touchmove", (e) => {
-            const x = e.touches[0].pageX;
-            const walk = (x - touchStartX) * 2;
-            slider.scrollLeft = touchScrollLeft - walk;
-        });
-
-        slider.addEventListener("touchend", () => {
-            track.classList.remove("paused");
-            indicator.classList.remove("indicator-paused");
-        });
-    </script>
 
     <section id="faq">
         <section class="wrapper">
@@ -594,7 +643,7 @@
     </section>
 
 
-    <section id="contact">
+    <section  id="contact">
         <section class="wrapper">
             <div class="top">
                 <h3>Get In Touch With us</h3>
@@ -726,9 +775,9 @@
                     <p class="text-sm mb-4">Quadvare is a technology-driven company focused on creating innovative
                         digital solutions.</p>
                     <div class="support-links text-sm">
-                        <a href="#">Support</a>
-                        <a href="#">Terms & Condition</a>
-                        <a href="#">Privacy Policy</a>
+                        <button onclick="navigateWithLoading('./support.html')" >Support</button>
+                        <button onclick="navigateWithLoading('./terms.html')" href="#">Terms & Condition</button>
+                        <button onclick="navigateWithLoading('./privacy.html')" href="#">Privacy Policy</button>
                     </div>
 
                 </div>
@@ -738,9 +787,9 @@
                     <div class="">
                         <h3 class="footer-title">Product</h3>
                         <ul class="footer-links space-y-2">
-                            <li><a href="#">Overview</a></li>
-                            <li><a href="#">Feature</a></li>
-                            <li><a href="#">Tutorial</a></li>
+                            <li><button onclick="navigateWithLoading('')">Overview</button></li>
+                            <li><button onclick="navigateWithLoading('')">Feature</button></li>
+                            <li><button onclick="navigateWithLoading('')">Tutorial</button></li>
                         </ul>
                     </div>
 
@@ -748,9 +797,9 @@
                     <div class="">
                         <h3 class="footer-title">Company</h3>
                         <ul class="footer-links space-y-2">
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Mission & Vision</a></li>
+                            <li><button onclick="navigateWithLoading('')">About us</button></li>
+                            <li><button onclick="navigateWithLoading('./support.html')">Contact</button></li>
+                            <li><button onclick="navigateWithLoading('')">Mission & Vision</button></li>
                         </ul>
                     </div>
 
@@ -758,25 +807,25 @@
                     <div class="">
                         <h3 class="footer-title">Resources</h3>
                         <ul class="footer-links space-y-2">
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Newsletter</a></li>
-                            <li><a href="#">Support</a></li>
+                            <li><button onclick="navigateWithLoading('')">Blog</button></li>
+                            <li><button onclick="navigateWithLoading('')">Newsletter</button></li>
+                            <li><button onclick="navigateWithLoading('./support.html')">Support</button></li>
                         </ul>
                     </div>
                     <div class="">
                         <h3 class="footer-title">Social Media</h3>
                         <ul class="footer-links space-y-2">
-                            <li><a href="#">LinkedIn</a></li>
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Instagram</a></li>
+                            <li><button onclick="navigateWithLoading('')">LinkedIn</button></li>
+                            <li><button onclick="navigateWithLoading('')">Facebook</button></li>
+                            <li><button onclick="navigateWithLoading('https://www.instagram.com/zappq.app?igsh=MWo3bWNjeTd0M2ZzYw==')">Instagram</button></li>
                         </ul>
                     </div>
                     <div class="">
                         <h3 class="footer-title">Legal</h3>
                         <ul class="footer-links space-y-2">
-                            <li><a href="#">Terms</a></li>
-                            <li><a href="#">Cookies</a></li>
-                            <li><a href="#">Licenses</a></li>
+                            <li><button onclick="navigateWithLoading('')">Terms</button></li>
+                            <li><button onclick="navigateWithLoading('')">Cookies</button></li>
+                            <li><button onclick="navigateWithLoading('')">Licenses</button></li>
                         </ul>
                     </div>
                 </div>
@@ -788,26 +837,29 @@
             <!-- Copyright and Social Icons -->
             <div class="copyright">
                 <div class="mb-4 md:mb-0">
-                    <p>@2025 Copyright ZappQ All Rights Reserved</p>
+                    <p>@2025 Copyright<b style="color:#1DEE7B;">ZappQ </b>All Rights Reserved</p>
                 </div>
                 <div class="flex space-x-4">
-                    <a href="#" class="social-icon">
+                    <button onclick="navigateWithLoading('')" class="social-icon">
                         <img src="./assets/images/Vector (1).svg" alt="">
-                    </a>
-                    <a href="#" class="social-icon">
+                    </button>
+                    <button onclick="navigateWithLoading('')" class="social-icon">
                         <img src="./assets/images/Vector (2).svg" alt="">
-                    </a>
-                    <a href="#" class="social-icon">
+                    </button>
+                    <button onclick="navigateWithLoading('')" class="social-icon">
                         <img src="./assets/images/Vector (3).svg" alt="">
-                    </a>
-                    <a href="#" class="social-icon">
+                    </button>
+                    <button  onclick="navigateWithLoading('https://www.instagram.com/zappq.app?igsh=MWo3bWNjeTd0M2ZzYw==')" class="social-icon">
                         <img src="./assets/images/Vector.svg" alt="">
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
     </footer>
 
+    <div class="loader-container" id="loaderContainer">
+        <img src="./assets/images/logo.png" class="loader" alt="Loading...">
+      </div>
     <script src="./assets/js/script.js"></script>
 
 

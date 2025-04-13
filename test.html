@@ -2,122 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ZappQ Testimonials</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Z Logo Loading Animation</title>
   <style>
-    .testimonial-card {
-      padding: 30px;
-      border-radius: 15px;
-      background-color: #fff;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-      margin: 20px;
-    }
-    .testimonial-card img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-    .carousel-item {
+    body {
       display: flex;
       justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
     }
-    .testimonial-name {
-      font-weight: bold;
+    
+    .container {
+      text-align: center;
     }
-    .testimonial-title {
-      color: #888;
-      font-size: 14px;
+    
+    .loader-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
     }
-    .zappq-highlight {
-      color: #2EFF80;
+    
+    .loader {
+      width: 80px;
+      height: 80px;
+      animation: spin 1.5s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 10px;
+    }
+    
+    button:hover {
+      background-color: #45a049;
     }
   </style>
 </head>
-<body style="background:#f8f9fa">
-
-<div class="container text-center mt-5">
-  <h2 class="fw-bold">HEAR WHAT OUR USERS <span class="zappq-highlight">LOVE ABOUT ZAPPQ!</span></h2>
-  <p class="text-muted mt-3">real experiences, real impact! see how zappq has transformed healthcare access for our users. from effortless bookings to real-time updates, discover why patients and doctors trust zappq for a seamless medical experience</p>
-
-  <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-
-      <div class="carousel-item active">
-        <div class="row justify-content-center">
-          <div class="col-md-3 testimonial-card">
-            <h6 class="text-muted">Booking Made Effortless!</h6>
-            <p><em>“I used to struggle with appointment scheduling, but ZappQ makes it so simple! The live updates are a lifesaver.”</em></p>
-            <div class="d-flex align-items-center mt-3">
-              <img src="https://i.pravatar.cc/50?img=1" alt="Sneha">
-              <div class="ms-2 text-start">
-                <div class="testimonial-name">Sneha Kapoor</div>
-                <div class="testimonial-title">Marketing Executive</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-3 testimonial-card">
-            <h6 class="text-muted">Smart & User-Friendly!</h6>
-            <p><em>“Even my parents find ZappQ easy to use! The AI symptom checker gives helpful insights before consulting a doctor.”</em></p>
-            <div class="d-flex align-items-center mt-3">
-              <img src="https://i.pravatar.cc/50?img=2" alt="Ananya">
-              <div class="ms-2 text-start">
-                <div class="testimonial-name">Ananya Verma</div>
-                <div class="testimonial-title">College Student</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-3 testimonial-card">
-            <h6 class="text-muted">Highly Secure & Reliable!</h6>
-            <p><em>“Managing patient records has never been this easy. ZappQ keeps everything secure and accessible anytime I need it.”</em></p>
-            <div class="d-flex align-items-center mt-3">
-              <img src="https://i.pravatar.cc/50?img=3" alt="Priya">
-              <div class="ms-2 text-start">
-                <div class="testimonial-name">Dr. Priya Sharma</div>
-                <div class="testimonial-title">Pediatrician</div>
-              </div>
-            </div>
-          </div>
-        </div>
+<body>
+  <div class="loader-container" id="loaderContainer">
+    <img src="./assets/images/logo.png" class="loader" alt="Loading...">
+  </div>
+  
+  <div class="container">
+    <div class="content">
+      <h1>Z Logo Loading Demo</h1>
+      <p>Click the buttons below to navigate. The loading animation will appear before redirecting.</p>
+      
+      <button onclick="navigateWithLoading('./index.html')">Navigate to Home Page</button>
+      <button onclick="navigateWithLoading('./page2.html')">Navigate to Page 2</button>
+      <button onclick="navigateWithLoading('./page3.html')">Navigate to Page 3</button>
+      
+      <div id="currentPage">
+        <h2>Demo Page</h2>
+        <p>This is the demo page. Click any button above to navigate to a different page with the loading animation.</p>
       </div>
-
-      <div class="carousel-item">
-        <div class="row justify-content-center">
-          <div class="col-md-3 testimonial-card">
-            <h6 class="text-muted">No More Long Waits!</h6>
-            <p><em>“The real-time tracking is amazing! I can plan my visit perfectly instead of sitting in a waiting room for hours.”</em></p>
-            <div class="d-flex align-items-center mt-3">
-              <img src="https://i.pravatar.cc/50?img=4" alt="Rajesh">
-              <div class="ms-2 text-start">
-                <div class="testimonial-name">Rajesh Iyer</div>
-                <div class="testimonial-title">IT Consultant</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Additional testimonials can be added here -->
-
-        </div>
-      </div>
-
-    </div>
-    <div class="carousel-indicators mt-4">
-      <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
     </div>
   </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  // Auto slide every 5 seconds
-  const carouselElement = document.querySelector('#testimonialCarousel');
-  const carousel = new bootstrap.Carousel(carouselElement, {
-    interval: 5000,
-    ride: 'carousel'
-  });
-</script>
+  <script>
+    function navigateWithLoading(url) {
+      // Show loader
+      const loader = document.getElementById('loaderContainer');
+      loader.style.display = 'flex';
+      
+      // Simulate a short delay before actual navigation
+      setTimeout(function() {
+        // Actual navigation
+        window.location.href = url;
+      }, 1500); // 1.5 seconds delay to show the loading animation
+    }
+  </script>
 </body>
 </html>
