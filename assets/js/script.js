@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get all navigation links
     const homeLink = document.getElementById('home');
     const aboutLink = document.getElementById('about');
-    const featureLink = document.getElementById('feature');
+    const featureLink = document.getElementById('featurs');
     const contactLink = document.getElementById('contact');
 
     // Add click event listeners
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     featureLink.addEventListener('click', function(e) {
         e.preventDefault();
-        const featureSection = document.querySelector('section#feature');
+        const featureSection = document.querySelector('section#featurs');
         featureSection.scrollIntoView({
             behavior: 'smooth'
         });
