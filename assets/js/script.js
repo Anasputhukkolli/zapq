@@ -113,6 +113,7 @@ $(document).ready(function(){
         autoplay: true,
         autoplaySpeed: 4000,
         centerMode: false,
+        arrows: false,
         responsive: [
             {
                 breakpoint: 1024,
