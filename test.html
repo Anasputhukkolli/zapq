@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ZappQ Testimonials</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .testimonial-card {
+      padding: 30px;
+      border-radius: 15px;
+      background-color: #fff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+      margin: 20px;
+    }
+    .testimonial-card img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .carousel-item {
+      display: flex;
+      justify-content: center;
+    }
+    .testimonial-name {
+      font-weight: bold;
+    }
+    .testimonial-title {
+      color: #888;
+      font-size: 14px;
+    }
+    .zappq-highlight {
+      color: #2EFF80;
+    }
+  </style>
+</head>
+<body style="background:#f8f9fa">
+
+<div class="container text-center mt-5">
+  <h2 class="fw-bold">HEAR WHAT OUR USERS <span class="zappq-highlight">LOVE ABOUT ZAPPQ!</span></h2>
+  <p class="text-muted mt-3">real experiences, real impact! see how zappq has transformed healthcare access for our users. from effortless bookings to real-time updates, discover why patients and doctors trust zappq for a seamless medical experience</p>
+
+  <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <div class="row justify-content-center">
+          <div class="col-md-3 testimonial-card">
+            <h6 class="text-muted">Booking Made Effortless!</h6>
+            <p><em>“I used to struggle with appointment scheduling, but ZappQ makes it so simple! The live updates are a lifesaver.”</em></p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="https://i.pravatar.cc/50?img=1" alt="Sneha">
+              <div class="ms-2 text-start">
+                <div class="testimonial-name">Sneha Kapoor</div>
+                <div class="testimonial-title">Marketing Executive</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 testimonial-card">
+            <h6 class="text-muted">Smart & User-Friendly!</h6>
+            <p><em>“Even my parents find ZappQ easy to use! The AI symptom checker gives helpful insights before consulting a doctor.”</em></p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="https://i.pravatar.cc/50?img=2" alt="Ananya">
+              <div class="ms-2 text-start">
+                <div class="testimonial-name">Ananya Verma</div>
+                <div class="testimonial-title">College Student</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 testimonial-card">
+            <h6 class="text-muted">Highly Secure & Reliable!</h6>
+            <p><em>“Managing patient records has never been this easy. ZappQ keeps everything secure and accessible anytime I need it.”</em></p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="https://i.pravatar.cc/50?img=3" alt="Priya">
+              <div class="ms-2 text-start">
+                <div class="testimonial-name">Dr. Priya Sharma</div>
+                <div class="testimonial-title">Pediatrician</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="row justify-content-center">
+          <div class="col-md-3 testimonial-card">
+            <h6 class="text-muted">No More Long Waits!</h6>
+            <p><em>“The real-time tracking is amazing! I can plan my visit perfectly instead of sitting in a waiting room for hours.”</em></p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="https://i.pravatar.cc/50?img=4" alt="Rajesh">
+              <div class="ms-2 text-start">
+                <div class="testimonial-name">Rajesh Iyer</div>
+                <div class="testimonial-title">IT Consultant</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional testimonials can be added here -->
+
+        </div>
+      </div>
+
+    </div>
+    <div class="carousel-indicators mt-4">
+      <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Auto slide every 5 seconds
+  const carouselElement = document.querySelector('#testimonialCarousel');
+  const carousel = new bootstrap.Carousel(carouselElement, {
+    interval: 5000,
+    ride: 'carousel'
+  });
+</script>
+</body>
+</html>
