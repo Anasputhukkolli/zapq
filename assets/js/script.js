@@ -133,7 +133,6 @@ $(document).ready(function(){
     });
 });
 
-
 document.addEventListener('DOMContentLoaded', function() {
     const slider = document.querySelector('.slider');
     const slides = document.querySelectorAll('.slide');
@@ -142,6 +141,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let currentSlide = 0;
     const slideCount = slides.length;
+    let slideInterval;
+    const autoSlideDelay = 3000; // Time between automatic slides (5 seconds)
     
     function goToSlide(slideIndex) {
         if (slideIndex < 0) {
@@ -154,13 +155,39 @@ document.addEventListener('DOMContentLoaded', function() {
         slider.style.transform = `translateX(-${currentSlide * 100}%)`;
     }
     
+    // Start automatic sliding
+    function startAutoSlide() {
+        slideInterval = setInterval(() => {
+            goToSlide(currentSlide + 1);
+        }, autoSlideDelay);
+    }
+    
+    // Stop automatic sliding
+    function stopAutoSlide() {
+        clearInterval(slideInterval);
+    }
+    
+    // Initialize auto slide
+    startAutoSlide();
+    
+    // Event listeners for buttons
     prevButton.addEventListener('click', () => {
         goToSlide(currentSlide - 1);
+        // Restart the timer when user interacts
+        stopAutoSlide();
+        startAutoSlide();
     });
     
     nextButton.addEventListener('click', () => {
         goToSlide(currentSlide + 1);
+        // Restart the timer when user interacts
+        stopAutoSlide();
+        startAutoSlide();
     });
+    
+    // Pause auto sliding when hovering over the slider (optional)
+    slider.addEventListener('mouseenter', stopAutoSlide);
+    slider.addEventListener('mouseleave', startAutoSlide);
 });
 
 function navigateWithLoading(url) {
@@ -174,3 +201,123 @@ function navigateWithLoading(url) {
       window.location.href = url;
     }, 1500); // 1.5 seconds delay to show the loading animation
   }
+
+
+  function animateCounter(elementId, finalValue, duration) {
+    const element = document.getElementById(elementId);
+    const startValue = 0;
+    const increment = Math.ceil(finalValue / (duration / 50));
+    let currentValue = startValue;
+    
+    const counterInterval = setInterval(() => {
+        currentValue += increment;
+        if (currentValue >= finalValue) {
+            currentValue = finalValue;
+            clearInterval(counterInterval);
+        }
+        element.textContent = currentValue;
+    }, 50);
+}
+
+// Start animations when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    animateCounter('doctors-counter', 70, 2000);
+    animateCounter('workers-counter', 24, 1500);
+    animateCounter('hours-counter', 24, 1500);
+});
+
+// Reset and restart counters when visible in viewport
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Restart animation when scrolled into view
+window.addEventListener('scroll', function() {
+    const counterSection = document.querySelector('.counter-section');
+    if (isElementInViewport(counterSection)) {
+        animateCounter('doctors-counter', 70, 2000);
+        animateCounter('workers-counter', 24, 1500);
+        animateCounter('hours-counter', 24, 1500);
+    }
+}, false);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get references to our elements
+    const videoContainer = document.getElementById('videoContainer');
+    const video = document.getElementById('myVideo');
+    const playButton = document.getElementById('playButton');
+    
+    // Add muted attribute to help with autoplay policies
+    video.muted = true;
+    
+    // Function to play video
+    function playVideo() {
+        // Using a promise to handle autoplay restrictions
+        const playPromise = video.play();
+        
+        if (playPromise !== undefined) {
+            playPromise
+                .then(() => {
+                    playButton.style.display = 'none';
+                    console.log('Video playing');
+                })
+                .catch(error => {
+                    // Auto-play was prevented
+                    console.log('Autoplay prevented:', error);
+                    // Show a user interaction message if needed
+                });
+        }
+    }
+    
+    // Function to pause video
+    function pauseVideo() {
+        video.pause();
+        playButton.style.display = 'flex';
+        console.log('Video paused');
+    }
+    
+    // Play on hover
+    videoContainer.addEventListener('mouseenter', function() {
+        console.log('Mouse entered');
+        playVideo();
+    });
+    
+    // Pause when mouse leaves
+    videoContainer.addEventListener('mouseleave', function() {
+        console.log('Mouse left');
+        pauseVideo();
+    });
+    
+    // Play/pause on click
+    playButton.addEventListener('click', function(e) {
+        console.log('Play button clicked');
+        e.stopPropagation();
+        playVideo();
+    });
+    
+    // Toggle play/pause when clicking on video
+    videoContainer.addEventListener('click', function() {
+        console.log('Container clicked');
+        if (video.paused) {
+            playVideo();
+        } else {
+            pauseVideo();
+        }
+    });
+    
+    // Show play button when video ends
+    video.addEventListener('ended', function() {
+        console.log('Video ended');
+        playButton.style.display = 'flex';
+    });
+    
+    // Debug to check if script is loading
+    console.log('Video player script loaded');
+});

@@ -59,18 +59,22 @@
                 <i class="fa-solid fa-circle-play"></i>
                 <span>Check out ZappQ</span>
             </button>
-            <div class="flex space-x-8 mt-8">
-                <div class="text-center">
-                    <p class="text-base md:text-2xl font-bold">200+</p>
-                    <p class="text-sm text-gray-600">Doctors</p>
-                </div>
-                <div class="text-center">
-                    <p class="md:text-2xl font-bold">15+</p>
-                    <p class=" text-sm text-gray-600">Hard worker's</p>
-                </div>
-                <div class="text-center">
-                    <p class="md:text-2xl font-bold">24/7</p>
-                    <p class="text-sm text-gray-600">Hours of support</p>
+            <div class="container py-5">
+                <div class="counter-section">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 col-sm-12 counter-item">
+                            <p class="counter-value"><span id="doctors-counter">0</span>+</p>
+                            <p class="counter-label">Doctors</p>
+                        </div>
+                        <div class="col-md-4 col-sm-12 counter-item">
+                            <p class="counter-value"><span id="workers-counter">0</span>+</p>
+                            <p class="counter-label">Hard worker's</p>
+                        </div>
+                        <div class="col-md-4 col-sm-12 counter-item">
+                            <p class="counter-value"><span id="hours-counter">0</span>/7</p>
+                            <p class="counter-label">Hours of support</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -84,69 +88,95 @@
         Trusted by leaders in the industry</div>
 
     <div
-        class="flex justify-center space-x-2 max-w-[20rem] md:max-w-[32rem] lg:max-w-[30rem] mx-auto md:space-x-10 lg:space-x-8 mt-28  md:mt-40 lg:mt-24 md:-mb-8 lg:-mb-20 ">
-        <div class="bg-[#D9D9D9] p-4 rounded-lg" style="filter: brightness(114%);">
-            <img src="./assets/images/logi.png" alt="Logo 1" class="h-5 md:h-7">
+        class="flex flex-wrap justify-center gap-4 md:gap-10 lg:gap-8 mt-28 md:mt-40 lg:mt-24 md:-mb-8 lg:-mb-20 max-w-[32rem] lg:max-w-[48rem] mx-auto">
+        <div class="" style="filter: brightness(114%);">
+            <a href="">
+                <img src="./assets/images/jaza.svg" alt="Logo 1" class="w-24 h-auto md:w-32 lg:w-28" />
+
+            </a>
         </div>
-        <div class="bg-[#D9D9D9] p-4 rounded-lg" style="filter: brightness(114%);">
-            <img src="./assets/images/logispium.png" alt="Logo 2" class="h-5 md:h-7">
+        <div class="" style="filter: brightness(114%);">
+            <a href="">
+                <img src="./assets/images/LOGO.svg" alt="Logo 2" class="w-24 h-auto md:w-32 lg:w-48" />
+
+            </a>
         </div>
-        <div class="bg-[#D9D9D9] p-4 rounded-lg" style="filter: brightness(114%);">
-            <img src="./assets/images/ipsm.png" alt="Logo 3" class="h-5 md:h-7">
-        </div>
+
     </div>
 
-    <section
-        class="flex flex-col md:flex-row justify-between items-start p-24 md:p-40 lg:p-44 space-y-10 md:space-y-0 md:space-x-16 lg:space-x-8 relative -mb-10 md:-mb-3 lg:-mb-28"
-        id="about">
-        <div class="text-center max-w-xs md:border-r md:border-gray-300 md:pr-9 hover-effect  ">
-            <div
-                class="bg-[#1DEE7B] rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-4 icon-circle">
-                <i class="fa-solid fa-calendar text-white text-2xl md:text-3xl icon"></i>
+
+    <section class="features-section" id="about">
+        <section class="wrapper">
+            <div class="features-container">
+                <!-- Feature 1 -->
+                <div class="feature-card hover-effect">
+                    <div
+                        class="bg-[#1DEE7B] rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-4 icon-circle">
+                        <i class="fa-solid fa-calendar text-white text-2xl md:text-3xl icon"></i>
+                    </div>
+                    <h3 class="feature-title">Smart Doctor Booking</h3>
+                    <p class="feature-description">Find doctors by specialization, location, and availability, then book
+                        instantly.
+                        Get a token and real-time updates for a seamless experience.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card hover-effect">
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-hourglass-half icon"></i>
+                    </div>
+                    <h3 class="feature-title">Real-Time Queue Tracking</h3>
+                    <p class="feature-description">ZappQ keeps you updated with live token tracking. Monitor your wait
+                        time, get
+                        notifications, and stay informed—no more long waits or uncertainty!</p>
+                </div>
+
+                <!-- Feature 3 (Coming Soon) -->
+                <div class="feature-card hover-effect">
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-robot icon"></i>
+                    </div>
+                    <h3 class="feature-title">AI Symptom Checker</h3>
+                    <p class="feature-description">ZappQ's AI chatbot analyzes symptoms instantly, providing quick
+                        health insights
+                        and guidance before you consult a doctor.</p>
+                    <div class="coming-soon-overlay">
+                        <span class="coming-soon-text">Coming Soon</span>
+                        <span class="coming-soon-subtext">We're working on it!</span>
+                    </div>
+                    <span class="coming-soon-badge">Coming Soon</span>
+                </div>
+
+                <!-- Feature 4 (Coming Soon) -->
+                <div class="feature-card hover-effect">
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-file-medical icon"></i>
+                    </div>
+                    <h3 class="feature-title">Smart Health Records</h3>
+                    <p class="feature-description">ZappQ securely stores medical records and appointment details,
+                        ensuring easy
+                        access while maintaining privacy and compliance with security standards.</p>
+                    <div class="coming-soon-overlay">
+                        <span class="coming-soon-text">Coming Soon</span>
+                        <span class="coming-soon-subtext">We're working on it!</span>
+                    </div>
+                    <span class="coming-soon-badge">Coming Soon</span>
+                </div>
             </div>
-            <h3 class="text-lg md:text-xl font-[poppinsmedium] mb-2 max-w-[10rem]">Smart Doctor Booking</h3>
-            <p class=" md:text-gray-600 font-[poppinsregular]  max-w-[10rem]  ">Find doctors by specialization,
-                location, and availability, then book instantly. Get a token and real-time updates for a seamless
-                experience.</p>
-        </div>
-        <div class="text-center max-w-xs md:border-r md:border-gray-300 md:pr-9 hover-effect">
-            <div
-                class="bg-[#1DEE7B] rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-4 icon-circle">
-                <i class="fa-solid fa-hourglass-half text-white text-2xl md:text-3xl icon"></i>
-            </div>
-            <h3 class="text-lg md:text-xl font-[poppinsmedium] mb-2 max-w-[10rem]">Real-Time Queue Tracking</h3>
-            <p class=" md:text-gray-600 font-[poppinsregular] max-w-[10rem]">ZappQ keeps you updated with live token
-                tracking. Monitor your wait time, get notifications, and stay informed—no more long waits or
-                uncertainty!</p>
-        </div>
-        <div class="text-center max-w-xs md:border-r md:border-gray-300 md:pr-9 hover-effect">
-            <div
-                class="bg-[#1DEE7B] rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-4 icon-circle">
-                <i class="fa-solid fa-robot text-white text-2xl md:text-3xl icon"></i>
-            </div>
-            <h3 class="text-lg md:text-xl font-[poppinsmedium] mb-2 max-w-[10rem]">AI Symptom Checker</h3>
-            <p class=" md:text-gray-600 font-[poppinsregular] max-w-[10rem]">ZappQ's AI chatbot analyzes symptoms
-                instantly, providing quick health insights and guidance before you consult a doctor.</p>
-        </div>
-        <div class="text-center max-w-xs hover-effect">
-            <div
-                class="bg-[#1DEE7B] rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-4 icon-circle">
-                <i class="fa-solid fa-file-medical text-white text-2xl md:text-3xl icon"></i>
-            </div>
-            <h3 class="text-lg md:text-xl font-[poppinsmedium] mb-2 max-w-[10rem]">Smart Health Records</h3>
-            <p class=" md:text-gray-600 font-[poppinsregular] max-w-[10rem]">ZappQ securely stores medical records and
-                appointment details, ensuring easy access while maintaining privacy and compliance with security
-                standards.</p>
-        </div>
+        </section>
     </section>
 
     <section class="px-[3rem] md:px-[3rem] lg:px-[3rem] lg:px-[10rem] mb-10" id="feature">
-        <p class="text-gray-600 md:text-[1.35rem] lg:text-[1.35rem] font-medium text-justify font-[poppinsregular]">
-            <span class="text-[#FF0000]">*</span>ZappQ revolutionizes healthcare access with seamless doctor booking,
-            real-time token updates, and AI-driven symptom analysis. Patients can easily find doctors, schedule
-            appointments, and track their wait times, ensuring a smooth and efficient experience. With secure digital
-            records, ZappQ simplifies medical data management while prioritizing privacy and security.
-        </p>
+        <section class="wrapper">
+            <p class="text-gray-600 md:text-[1.35rem] lg:text-[1.35rem] font-medium text-justify font-[poppinsregular]">
+                <span class="text-[#FF0000]">*</span>ZappQ revolutionizes healthcare access with seamless doctor
+                booking,
+                real-time token updates, and AI-driven symptom analysis. Patients can easily find doctors, schedule
+                appointments, and track their wait times, ensuring a smooth and efficient experience. With secure
+                digital
+                records, ZappQ simplifies medical data management while prioritizing privacy and security.
+            </p>
+        </section>
     </section>
 
     <section
@@ -180,14 +210,14 @@
             <div
                 class="w-full md:w-[48%] lg:w-1/2 relative md:left-14 lg:left-10 mt-4 md:mt-0 -top-[2rem] md:-top-12 lg:top-14">
                 <!-- Video container -->
-                <div
-                    class="relative bg-[#E5E5E5] rounded-[1rem] md:rounded-[1.2rem] lg:rounded-[1.5rem] overflow-hidden aspect-video w-full md:w-full lg:w-[35rem] h-[12rem] md:h-[25rem] lg:h-[31rem] md:right-0 lg:-right-6">
-                    <video class="w-full h-full object-cover" poster="./assets/images/video-thumb.jpg">
-                        <source src="./assets/video/demo.mp4" type="video/mp4">
+                <div class="relative" id="videoContainer">
+                    <video id="myVideo" preload="metadata" poster="./assets/images/video-thumb.jpg">
+                        <source src="" type="video/mp4">
+                        Your browser does not support the video tag.
                     </video>
-                    <button class="absolute inset-0 flex items-center justify-center">
-                        <i class="fa-solid fa-play text-3xl md:text-4xl text-white"></i>
-                    </button>
+                    <div class="play-button" id="playButton">
+                        <i class="fa-solid fa-play play-icon"></i>
+                    </div>
                 </div>
 
                 <!-- Floating appointment box -->
@@ -248,35 +278,41 @@
 
     <section
         class="bg-[#1DEE7B] rounded-[1.5rem] md:rounded-[2rem] mx-4 md:mx-16 lg:mx-32 p-6 md:p-12 mb-16 md:mb-20 relative overflow-hidden bg-[url('./assets/images/bgline.svg')] bg-no-repeat bg-cover before:content-[''] before:absolute before:inset-0 before:bg-[#1DEE7B] before:opacity-95 before:-z-[1] relative top-5 md:-top-16 lg:top-0 mt-[14rem] ">
-        <div class="flex flex-col md:flex-row justify-between items-center relative z-10">
-            <!-- Left side content -->
-            <div class="w-full md:w-2/3 mb-6 md:mb-0">
-                <h2 class="text-2xl md:text-4xl lg:text-[2.6rem] font-[poppinsmedium] mb-4">Get the ZappQ app now!</h2>
-                <p class="text-sm md:text-lg lg:text-lg mb-6 md:mb-9 text-[#535A57] font-[poppinsregular] max-w-2xl">
-                    experience seamless doctor booking, real-time queue tracking, and ai-powered health assistance—all
-                    in one app. download zappq today and take control of your healthcare journey!
-                </p>
-                <p
-                    class="text-base md:text-2xl lg:text-xl text-[#121514] mb-8 md:mb-0 md:relative md:top-[8.9rem] lg:top-[4.5rem] font-[poppinsitalic]">
-                    "your health, your way!"</p>
-                <div
-                    class="flex flex-row md:flex-row gap-4 md:gap-8 justify-center md:justify-end items-center -top-6 md:-top-0 lg:-top-0 relative">
-                    <a href="#" class="transform hover:scale-105 transition-transform w-32 md:w-auto">
-                        <img src="./assets/images/ios.svg" alt="Download on App Store"
-                            class="h-10 h-[6.2rem]  md:h-[8.3rem] lg:h-[8.3rem] md:-mt-1  lg:-mt-20 lg:top-11 relative">
-                    </a>
-                    <a href="#" class="transform hover:scale-105 transition-transform w-32 md:w-auto">
-                        <img src="./assets/images/android.png" alt="Get it on Google Play" class="h-10 md:h-14 lg:h-14">
-                    </a>
+        <section class="wrapper">
+            <div class="flex flex-col md:flex-row justify-between items-center relative z-10">
+                <!-- Left side content -->
+                <div class="w-full md:w-2/3 mb-6 md:mb-0">
+                    <h2 class="text-2xl md:text-4xl lg:text-[2.6rem] font-[poppinsmedium] mb-4">Get the ZappQ app now!
+                    </h2>
+                    <p
+                        class="text-sm md:text-lg lg:text-lg mb-6 md:mb-9 text-[#535A57] font-[poppinsregular] max-w-2xl">
+                        experience seamless doctor booking, real-time queue tracking, and ai-powered health
+                        assistance—all
+                        in one app. download zappq today and take control of your healthcare journey!
+                    </p>
+                    <p
+                        class="text-base md:text-2xl lg:text-xl text-[#121514] mb-8 md:mb-0 md:relative md:top-[8.9rem] lg:top-[4.5rem] font-[poppinsitalic]">
+                        "your health, your way!"</p>
+                    <div
+                        class="flex flex-row md:flex-row gap-4 md:gap-8 justify-center md:justify-end items-center -top-6 md:-top-0 lg:-top-0 relative">
+                        <a href="#" class="transform hover:scale-105 transition-transform w-32 md:w-auto">
+                            <img src="./assets/images/ios.svg" alt="Download on App Store"
+                                class="h-10 h-[6.2rem]  md:h-[8.3rem] lg:h-[8.3rem] md:-mt-1  lg:-mt-20 lg:top-11 relative">
+                        </a>
+                        <a href="#" class="transform hover:scale-105 transition-transform w-32 md:w-auto">
+                            <img src="./assets/images/android.png" alt="Get it on Google Play"
+                                class="h-10 md:h-14 lg:h-14">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right side QR code -->
+                <div class="text-center relative -top-4 md:-top-0 lg:-top-0 -mt-5 md:-mt-0 lg:-mt-0 ">
+                    <img src="./assets/images/qrcode.png" alt="QR Code" class="w-28 md:w-40 lg:w-48 mb-2">
+
                 </div>
             </div>
-
-            <!-- Right side QR code -->
-            <div class="text-center relative -top-4 md:-top-0 lg:-top-0 -mt-5 md:-mt-0 lg:-mt-0 ">
-                <img src="./assets/images/qrcode.png" alt="QR Code" class="w-28 md:w-40 lg:w-48 mb-2">
-
-            </div>
-        </div>
+        </section>
     </section>
 
     <section id="founders">
@@ -291,10 +327,12 @@
                                 BEHIND <span class="zappq-color">ZAPPQ</span>
                             </h1>
                             <p class="text-gray-600 text-lg mb-8">
-                                zappq is built by a passionate team of developers, healthcare experts, dedicated to making medical appointments seamless. our mission is to simplify healthcare access for both patients and doctors.
+                                zappq is built by a passionate team of developers, healthcare experts, dedicated to
+                                making medical appointments seamless. our mission is to simplify healthcare access for
+                                both patients and doctors.
                             </p>
                         </div>
-                        
+
                         <div class="nav-buttons">
                             <button class="nav-button prev button-zappq">
                                 <i class="fas fa-arrow-left"></i>
@@ -304,7 +342,7 @@
                             </button>
                         </div>
                     </div>
-                    
+
                     <!-- Right Slider Section -->
                     <div class="slider-section w-full lg:w-3/5">
                         <div class="slider-container">
@@ -313,68 +351,80 @@
                                 <div class="slide">
                                     <div class="team-grid">
                                         <div class="team-member">
-                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member"
+                                                class="team-image">
                                             <h3 class="text-xl font-semibold">Ananya Verma</h3>
-                                            <p >CEO</p>
+                                            <p>CEO</p>
                                         </div>
                                         <div class="team-member">
-                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member"
+                                                class="team-image">
                                             <h3 class="text-xl font-semibold">Ananya Verma</h3>
-                                            <p >CEO</p>
+                                            <p>CEO</p>
                                         </div>
                                         <div class="team-member">
-                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member"
+                                                class="team-image">
                                             <h3 class="text-xl font-semibold">Ananya Verma</h3>
-                                            <p >CEO</p>
+                                            <p>CEO</p>
                                         </div>
                                         <div class="team-member">
-                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member"
+                                                class="team-image">
                                             <h3 class="text-xl font-semibold">Ananya Verma</h3>
-                                            <p >CEO</p>
+                                            <p>CEO</p>
                                         </div>
                                         <div class="team-member">
-                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member"
+                                                class="team-image">
                                             <h3 class="text-xl font-semibold">Ananya Verma</h3>
-                                            <p >CEO</p>
+                                            <p>CEO</p>
                                         </div>
                                         <div class="team-member">
-                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member"
+                                                class="team-image">
                                             <h3 class="text-xl font-semibold">Ananya Verma</h3>
-                                            <p >CEO</p>
+                                            <p>CEO</p>
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Slide 2: Another 6 team members -->
                                 <div class="slide">
                                     <div class="team-grid">
                                         <div class="team-member">
-                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member"
+                                                class="team-image">
                                             <h3 class="text-xl font-semibold">Michael Chen</h3>
                                             <p class="text-gray-500">CTO</p>
                                         </div>
                                         <div class="team-member">
-                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member"
+                                                class="team-image">
                                             <h3 class="text-xl font-semibold">Sarah Johnson</h3>
                                             <p class="text-gray-500">Lead Developer</p>
                                         </div>
                                         <div class="team-member">
-                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member"
+                                                class="team-image">
                                             <h3 class="text-xl font-semibold">David Kim</h3>
                                             <p class="text-gray-500">UX Designer</p>
                                         </div>
                                         <div class="team-member">
-                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member"
+                                                class="team-image">
                                             <h3 class="text-xl font-semibold">Priya Patel</h3>
                                             <p class="text-gray-500">Medical Advisor</p>
                                         </div>
                                         <div class="team-member">
-                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member"
+                                                class="team-image">
                                             <h3 class="text-xl font-semibold">James Wilson</h3>
                                             <p class="text-gray-500">Product Manager</p>
                                         </div>
                                         <div class="team-member">
-                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member" class="team-image">
+                                            <img src="./assets/images/Rectangle 79.png" alt="Team Member"
+                                                class="team-image">
                                             <h3 class="text-xl font-semibold">Emma Garcia</h3>
                                             <p class="text-gray-500">Marketing Director</p>
                                         </div>
@@ -387,7 +437,7 @@
             </div>
         </section>
     </section>
-    
+
 
     <section id="testimonial">
         <section class="wrapper">
@@ -411,7 +461,7 @@
 
                 <div style="width: auto;" class="testimonial-slider">
                     <!-- Testimonial 1 -->
-                    <div >
+                    <div>
                         <div class="testimonial-card">
                             <h3 class="text-xl font-semibold mb-4">Booking Made Effortless!</h3>
                             <p class="quote-text">"I used to struggle with appointment scheduling, but your platform
@@ -643,7 +693,7 @@
     </section>
 
 
-    <section  id="contact">
+    <section id="contact">
         <section class="wrapper">
             <div class="top">
                 <h3>Get In Touch With us</h3>
@@ -775,7 +825,7 @@
                     <p class="text-sm mb-4">Quadvare is a technology-driven company focused on creating innovative
                         digital solutions.</p>
                     <div class="support-links text-sm">
-                        <button onclick="navigateWithLoading('./support.html')" >Support</button>
+                        <button onclick="navigateWithLoading('./support.html')">Support</button>
                         <button onclick="navigateWithLoading('./terms.html')" href="#">Terms & Condition</button>
                         <button onclick="navigateWithLoading('./privacy.html')" href="#">Privacy Policy</button>
                     </div>
@@ -797,9 +847,9 @@
                     <div class="">
                         <h3 class="footer-title">Company</h3>
                         <ul class="footer-links space-y-2">
-                            <li><button onclick="navigateWithLoading('')">About us</button></li>
+                            <li><a href="#about">About us</a></li>
                             <li><button onclick="navigateWithLoading('./support.html')">Contact</button></li>
-                            <li><button onclick="navigateWithLoading('')">Mission & Vision</button></li>
+                            <li><a href="#testimonial">Mission & Vision</a></li>
                         </ul>
                     </div>
 
@@ -815,9 +865,15 @@
                     <div class="">
                         <h3 class="footer-title">Social Media</h3>
                         <ul class="footer-links space-y-2">
-                            <li><button onclick="navigateWithLoading('')">LinkedIn</button></li>
-                            <li><button onclick="navigateWithLoading('')">Facebook</button></li>
-                            <li><button onclick="navigateWithLoading('https://www.instagram.com/zappq.app?igsh=MWo3bWNjeTd0M2ZzYw==')">Instagram</button></li>
+                            <li><button
+                                    onclick="navigateWithLoading('https://www.linkedin.com/company/zappq/')">LinkedIn</button>
+                            </li>
+                            <li><button
+                                    onclick="navigateWithLoading('https://www.facebook.com/share/163Pbci9RT/?mibextid=wwXIfr')">Facebook</button>
+                            </li>
+                            <li><button
+                                    onclick="navigateWithLoading('https://www.instagram.com/zappq.app?igsh=MWo3bWNjeTd0M2ZzYw==')">Instagram</button>
+                            </li>
                         </ul>
                     </div>
                     <div class="">
@@ -840,16 +896,20 @@
                     <p>@2025 Copyright<b style="color:#1DEE7B;">ZappQ </b>All Rights Reserved</p>
                 </div>
                 <div class="flex space-x-4">
-                    <button onclick="navigateWithLoading('')" class="social-icon">
+                    <button onclick="navigateWithLoading('https://www.facebook.com/share/163Pbci9RT/?mibextid=wwXIfr')"
+                        class="social-icon">
                         <img src="./assets/images/Vector (1).svg" alt="">
                     </button>
                     <button onclick="navigateWithLoading('')" class="social-icon">
                         <img src="./assets/images/Vector (2).svg" alt="">
                     </button>
-                    <button onclick="navigateWithLoading('')" class="social-icon">
+                    <button onclick="navigateWithLoading('https://www.linkedin.com/company/zappq/')"
+                        class="social-icon">
                         <img src="./assets/images/Vector (3).svg" alt="">
                     </button>
-                    <button  onclick="navigateWithLoading('https://www.instagram.com/zappq.app?igsh=MWo3bWNjeTd0M2ZzYw==')" class="social-icon">
+                    <button
+                        onclick="navigateWithLoading('https://www.instagram.com/zappq.app?igsh=MWo3bWNjeTd0M2ZzYw==')"
+                        class="social-icon">
                         <img src="./assets/images/Vector.svg" alt="">
                     </button>
                 </div>
@@ -859,7 +919,7 @@
 
     <div class="loader-container" id="loaderContainer">
         <img src="./assets/images/logo.png" class="loader" alt="Loading...">
-      </div>
+    </div>
     <script src="./assets/js/script.js"></script>
 
 

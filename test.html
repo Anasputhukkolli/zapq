@@ -1,102 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Z Logo Loading Animation</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f5f5f5;
-      font-family: Arial, sans-serif;
-    }
-    
-    .container {
-      text-align: center;
-    }
-    
-    .loader-container {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(255, 255, 255, 0.8);
-      z-index: 1000;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .loader {
-      width: 80px;
-      height: 80px;
-      animation: spin 1.5s linear infinite;
-    }
-    
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    
-    .content {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    
-    button {
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 16px;
-      margin: 10px;
-    }
-    
-    button:hover {
-      background-color: #45a049;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .relative {
+            position: relative;
+            background: #E5E5E5;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            aspect-ratio: 16/9;
+            width: 100%;
+            max-width: 35rem;
+            height: 31rem;
+        }
+        
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .play-button {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+        
+        .play-icon {
+            font-size: 4rem;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-  <div class="loader-container" id="loaderContainer">
-    <img src="./assets/images/logo.png" class="loader" alt="Loading...">
-  </div>
-  
-  <div class="container">
-    <div class="content">
-      <h1>Z Logo Loading Demo</h1>
-      <p>Click the buttons below to navigate. The loading animation will appear before redirecting.</p>
-      
-      <button onclick="navigateWithLoading('./index.html')">Navigate to Home Page</button>
-      <button onclick="navigateWithLoading('./page2.html')">Navigate to Page 2</button>
-      <button onclick="navigateWithLoading('./page3.html')">Navigate to Page 3</button>
-      
-      <div id="currentPage">
-        <h2>Demo Page</h2>
-        <p>This is the demo page. Click any button above to navigate to a different page with the loading animation.</p>
-      </div>
+    <div class="relative" id="videoContainer">
+        <video id="myVideo" preload="metadata" poster="./assets/images/video-thumb.jpg">
+            <source src="./assets/video/demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="play-button" id="playButton">
+            <i class="fa-solid fa-play play-icon"></i>
+        </div>
     </div>
-  </div>
 
-  <script>
-    function navigateWithLoading(url) {
-      // Show loader
-      const loader = document.getElementById('loaderContainer');
-      loader.style.display = 'flex';
-      
-      // Simulate a short delay before actual navigation
-      setTimeout(function() {
-        // Actual navigation
-        window.location.href = url;
-      }, 1500); // 1.5 seconds delay to show the loading animation
-    }
-  </script>
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get references to our elements
+            const videoContainer = document.getElementById('videoContainer');
+            const video = document.getElementById('myVideo');
+            const playButton = document.getElementById('playButton');
+            
+            // Add muted attribute to help with autoplay policies
+            video.muted = true;
+            
+            // Function to play video
+            function playVideo() {
+                // Using a promise to handle autoplay restrictions
+                const playPromise = video.play();
+                
+                if (playPromise !== undefined) {
+                    playPromise
+                        .then(() => {
+                            playButton.style.display = 'none';
+                            console.log('Video playing');
+                        })
+                        .catch(error => {
+                            // Auto-play was prevented
+                            console.log('Autoplay prevented:', error);
+                            // Show a user interaction message if needed
+                        });
+                }
+            }
+            
+            // Function to pause video
+            function pauseVideo() {
+                video.pause();
+                playButton.style.display = 'flex';
+                console.log('Video paused');
+            }
+            
+            // Play on hover
+            videoContainer.addEventListener('mouseenter', function() {
+                console.log('Mouse entered');
+                playVideo();
+            });
+            
+            // Pause when mouse leaves
+            videoContainer.addEventListener('mouseleave', function() {
+                console.log('Mouse left');
+                pauseVideo();
+            });
+            
+            // Play/pause on click
+            playButton.addEventListener('click', function(e) {
+                console.log('Play button clicked');
+                e.stopPropagation();
+                playVideo();
+            });
+            
+            // Toggle play/pause when clicking on video
+            videoContainer.addEventListener('click', function() {
+                console.log('Container clicked');
+                if (video.paused) {
+                    playVideo();
+                } else {
+                    pauseVideo();
+                }
+            });
+            
+            // Show play button when video ends
+            video.addEventListener('ended', function() {
+                console.log('Video ended');
+                playButton.style.display = 'flex';
+            });
+            
+            // Debug to check if script is loading
+            console.log('Video player script loaded');
+        });
+    </script>
 </body>
 </html>
