@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="icon" href="./assets/images/logo.png">
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Zappq</title>
@@ -44,7 +46,7 @@
                 <!-- Effective Date -->
                 <div class="flex items-center gap-2 text-xl">
                     <span class="font-[poppinsregular] font-bold">Effective Date :</span>
-                    <span class="text-[#1DEE7B]">[ Date]</span>
+                    <span class="text-[#1DEE7B]">[ 1-jan-2025]</span>
                 </div>
 
                 <!-- Section 1 -->
@@ -316,7 +318,7 @@
                     <p class="text-sm mb-4">Quadvare is a technology-driven company focused on creating innovative
                         digital solutions.</p>
                     <div class="support-links text-sm">
-                        <button onclick="navigateWithLoading('./support.html')" >Support</button>
+                        <button onclick="navigateWithLoading('./support.html')">Support</button>
                         <button onclick="navigateWithLoading('./terms.html')" href="#">Terms & Condition</button>
                         <button onclick="navigateWithLoading('./privacy.html')" href="#">Privacy Policy</button>
                     </div>
@@ -328,9 +330,9 @@
                     <div class="">
                         <h3 class="footer-title">Product</h3>
                         <ul class="footer-links space-y-2">
-                            <li><a href="#">Overview</a></li>
-                            <li><a href="#">Feature</a></li>
-                            <li><a href="#">Tutorial</a></li>
+                            <li><button onclick="navigateWithLoading('')">Overview</button></li>
+                            <li><button onclick="navigateWithLoading('')">Feature</button></li>
+                            <li><button onclick="navigateWithLoading('')">Tutorial</button></li>
                         </ul>
                     </div>
 
@@ -338,37 +340,43 @@
                     <div class="">
                         <h3 class="footer-title">Company</h3>
                         <ul class="footer-links space-y-2">
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Mission & Vision</a></li>
+                            <li><a href="#about">About us</a></li>
+                            <li><button onclick="navigateWithLoading('./support.html')">Support</button></li>
+                            <li><a href="#testimonial">Mission & Vision</a></li>
                         </ul>
                     </div>
 
                     <!-- Resources Column -->
-                    <div class="">
+                    <!-- <div class="">
                         <h3 class="footer-title">Resources</h3>
                         <ul class="footer-links space-y-2">
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Newsletter</a></li>
-                            <li><a href="#">Support</a></li>
+                            <li><button onclick="navigateWithLoading('')">Blog</button></li>
+                            <li><button onclick="navigateWithLoading('')">Newsletter</button></li>
+                            <li><button onclick="navigateWithLoading('./support.html')">Support</button></li>
                         </ul>
-                    </div>
+                    </div> -->
                     <div class="">
                         <h3 class="footer-title">Social Media</h3>
                         <ul class="footer-links space-y-2">
-                            <li><a href="#">LinkedIn</a></li>
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Instagram</a></li>
+                            <li><button
+                                    onclick="navigateWithLoading('https://www.linkedin.com/company/zappq/')">LinkedIn</button>
+                            </li>
+                            <li><button
+                                    onclick="navigateWithLoading('https://www.facebook.com/share/163Pbci9RT/?mibextid=wwXIfr')">Facebook</button>
+                            </li>
+                            <li><button
+                                    onclick="navigateWithLoading('https://www.instagram.com/zappq.app?igsh=MWo3bWNjeTd0M2ZzYw==')">Instagram</button>
+                            </li>
                         </ul>
                     </div>
-                    <div class="">
+                    <!-- <div class="">
                         <h3 class="footer-title">Legal</h3>
                         <ul class="footer-links space-y-2">
-                            <li><a href="#">Terms</a></li>
-                            <li><a href="#">Cookies</a></li>
-                            <li><a href="#">Licenses</a></li>
+                            <li><button onclick="navigateWithLoading('')">Terms</button></li>
+                            <li><button onclick="navigateWithLoading('')">Cookies</button></li>
+                            <li><button onclick="navigateWithLoading('')">Licenses</button></li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
 
                 <!-- Social Media Column -->
@@ -378,21 +386,25 @@
             <!-- Copyright and Social Icons -->
             <div class="copyright">
                 <div class="mb-4 md:mb-0">
-                    <p>@2025 Copyright ZappQ All Rights Reserved</p>
+                    <p>@2025 Copyright<b style="color:#1DEE7B;">ZappQ </b>All Rights Reserved</p>
                 </div>
                 <div class="flex space-x-4">
-                    <a href="#" class="social-icon">
+                    <button onclick="navigateWithLoading('https://www.facebook.com/share/163Pbci9RT/?mibextid=wwXIfr')"
+                        class="social-icon">
                         <img src="./assets/images/Vector (1).svg" alt="">
-                    </a>
-                    <a href="#" class="social-icon">
+                    </button>
+                    <button onclick="navigateWithLoading('')" class="social-icon">
                         <img src="./assets/images/Vector (2).svg" alt="">
-                    </a>
-                    <a href="#" class="social-icon">
+                    </button>
+                    <button onclick="navigateWithLoading('https://www.linkedin.com/company/zappq/')"
+                        class="social-icon">
                         <img src="./assets/images/Vector (3).svg" alt="">
-                    </a>
-                    <a href="#" class="social-icon">
+                    </button>
+                    <button
+                        onclick="navigateWithLoading('https://www.instagram.com/zappq.app?igsh=MWo3bWNjeTd0M2ZzYw==')"
+                        class="social-icon">
                         <img src="./assets/images/Vector.svg" alt="">
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
