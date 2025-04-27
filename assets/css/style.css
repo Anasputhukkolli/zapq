@@ -38,6 +38,7 @@
 
     .navbar-menu li {
         margin: 10px 0;
+        margin-left: 0 !important;
     }
 
     .flex-col-reverse {
