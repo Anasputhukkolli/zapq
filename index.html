@@ -18,7 +18,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 
 
-
+    <style>
+        .carousel-item img {
+            max-height: 200px;
+            object-fit: contain;
+            margin: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -41,7 +47,8 @@
                     started</button>
             </li>
         </ul>
-        <button  onclick="navigateWithLoading('https://play.google.com/store/apps/details?id=com.quadvare.mediza.app&pli=1')"
+        <button
+            onclick="navigateWithLoading('https://play.google.com/store/apps/details?id=com.quadvare.mediza.app&pli=1')"
             class="hidden md:inline-block bg-black text-white px-6 font-semibold font-[poppinsmedium] py-3 rounded-full hover:bg-gray-800 ">Get
             started</button>
     </nav>
@@ -88,84 +95,134 @@
         class="text-center   text-[1rem] md:text-[1.3rem]  font-[poppinsmedium] text-[#5D6561] relative top-[4.9rem] md:top-[7.1rem] lg:top-[2.6rem] ">
         Trusted by leaders in the industry</div>
 
-    <div
-        class="flex flex-wrap justify-center gap-4 md:gap-10 lg:gap-8 mt-28 md:mt-40 lg:mt-24 md:-mb-8 lg:-mb-20 max-w-[32rem] lg:max-w-[48rem] mx-auto">
-        <div class="" style="filter: brightness(114%);">
-            <a href="">
-                <img src="./assets/images/jaza.svg" alt="Logo 1" class="w-24 h-auto md:w-32 lg:w-28" />
 
-            </a>
+    <div class="container py-5">
+        <div id="logoCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner text-center">
+
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-around align-items-center">
+                        <img src="./assets/images/Ayur Salama.jpg" alt="Logo 1">
+                        <img src="./assets/images/Dr JK_s Fertility Clinic.png" alt="Logo 2">
+                        <img src="./assets/images/Medicore Homeopathic Clinic.jpeg" alt="Logo 3">
+                        <img src="./assets/images/Z9 Homoeopathic Clinic.jpeg" alt="Logo 4">
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-around align-items-center">
+                        <img src="./assets/images/Noor Eye Clinic & Opticals.jpg" alt="Logo 5">
+                        <img src="./assets/images/Neo Skin Speciality Centre.webp" alt="Logo 6">
+                        <img src="./assets/images/jaza.svg" alt="Logo 7">
+                        <img src="./assets/images/Medicore Homeopathic Clinic.jpeg" alt="Logo 8">
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="" style="filter: brightness(114%);">
-            <a href="">
-                <img src="./assets/images/LOGO.svg" alt="Logo 2" class="w-24 h-auto md:w-32 lg:w-48" />
-
-            </a>
-        </div>
-
     </div>
 
-
-    <section class="features-section" id="about">
+    <section class="pt-6" id="testimonial">
         <section class="wrapper">
-            <div class="features-container">
-                <!-- Feature 1 -->
-                <div class="feature-card hover-effect">
-                    <div
-                        class="bg-[#1DEE7B] rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-4 icon-circle">
-                        <i class="fa-solid fa-calendar text-white text-2xl md:text-3xl icon"></i>
+
+            <div class="bottom">
+
+                <div style="width: auto;" class="testimonial-slider">
+                    <!-- Testimonial 1 -->
+                    <div>
+                        <div class="feature-card hover-effect">
+                            <div
+                                class="bg-[#1DEE7B] rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-4 icon-circle">
+                                <i class="fa-solid fa-calendar text-white text-2xl md:text-3xl icon"></i>
+                            </div>
+                            <h3 class="feature-title">Smart Doctor Booking</h3>
+                            <p class="feature-description">Find doctors by specialization, location, and availability,
+                                then book
+                                instantly.
+                                Get a token and real-time updates for a seamless experience.</p>
+                        </div>
                     </div>
-                    <h3 class="feature-title">Smart Doctor Booking</h3>
-                    <p class="feature-description">Find doctors by specialization, location, and availability, then book
-                        instantly.
-                        Get a token and real-time updates for a seamless experience.</p>
+
+                    <!-- Testimonial 2 -->
+                    <div>
+                        <div class="feature-card hover-effect">
+                            <div class="icon-circle">
+                                <i class="fa-solid fa-hourglass-half icon"></i>
+                            </div>
+                            <h3 class="feature-title">Real-Time Queue Tracking</h3>
+                            <p class="feature-description">ZappQ keeps you updated with live token tracking. Monitor
+                                your wait
+                                time, get
+                                notifications, and stay informed—no more long waits or uncertainty!</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div>
+                        <div class="feature-card hover-effect">
+                            <div class="icon-circle">
+                                <i class="fa-solid fa-pills icon"></i>
+                            </div>
+                            <h3 class="feature-title">Doorstep Pharmacy Delivery</h3>
+                            <p class="feature-description">Upload your prescription and our <span
+                                    class="highlight">smart chat
+                                    system</span> instantly appears to confirm your order details. Once verified, your
+                                medicines
+                                are delivered right to your doorstep—fast, secure, and hassle-free!</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div>
+                        <div class="feature-card hover-effect">
+                            <div class="icon-circle clinic">
+                                <i class="fa-solid fa-stethoscope icon"></i>
+                            </div>
+                            <h3 class="feature-title">Smart Clinic Home Testing</h3>
+                            <p class="feature-description">Order lab tests from home and our <span
+                                    class="highlight">certified
+                                    medical staff</span> visits your location within a day. Get your samples collected
+                                professionally and receive accurate results quickly—healthcare made convenient!</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div>
+                        <div class="feature-card hover-effect">
+                            <div class="icon-circle">
+                                <i class="fa-solid fa-file-medical icon"></i>
+                            </div>
+                            <h3 class="feature-title">Smart Health Records</h3>
+                            <p class="feature-description">ZappQ securely stores medical records and appointment
+                                details,
+                                ensuring easy
+                                access while maintaining privacy and compliance with security standards.</p>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="feature-card hover-effect">
+                            <div class="icon-circle">
+                                <i class="fa-solid fa-robot icon"></i>
+                            </div>
+                            <h3 class="feature-title">AI Symptom Checker</h3>
+                            <p class="feature-description">ZappQ's AI chatbot analyzes symptoms instantly, providing
+                                quick
+                                health insights
+                                and guidance before you consult a doctor.</p>
+                            <div class="coming-soon-overlay">
+                                <span class="coming-soon-text">Coming Soon</span>
+                                <span class="coming-soon-subtext">We're working on it!</span>
+                            </div>
+                            <span class="coming-soon-badge">Coming Soon</span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="feature-card hover-effect">
-                    <div class="icon-circle">
-                        <i class="fa-solid fa-hourglass-half icon"></i>
-                    </div>
-                    <h3 class="feature-title">Real-Time Queue Tracking</h3>
-                    <p class="feature-description">ZappQ keeps you updated with live token tracking. Monitor your wait
-                        time, get
-                        notifications, and stay informed—no more long waits or uncertainty!</p>
-                </div>
-
-                <!-- Feature 3 (Coming Soon) -->
-                <div class="feature-card hover-effect">
-                    <div class="icon-circle">
-                        <i class="fa-solid fa-robot icon"></i>
-                    </div>
-                    <h3 class="feature-title">AI Symptom Checker</h3>
-                    <p class="feature-description">ZappQ's AI chatbot analyzes symptoms instantly, providing quick
-                        health insights
-                        and guidance before you consult a doctor.</p>
-                    <div class="coming-soon-overlay">
-                        <span class="coming-soon-text">Coming Soon</span>
-                        <span class="coming-soon-subtext">We're working on it!</span>
-                    </div>
-                    <span class="coming-soon-badge">Coming Soon</span>
-                </div>
-
-                <!-- Feature 4 (Coming Soon) -->
-                <div class="feature-card hover-effect">
-                    <div class="icon-circle">
-                        <i class="fa-solid fa-file-medical icon"></i>
-                    </div>
-                    <h3 class="feature-title">Smart Health Records</h3>
-                    <p class="feature-description">ZappQ securely stores medical records and appointment details,
-                        ensuring easy
-                        access while maintaining privacy and compliance with security standards.</p>
-                    <div class="coming-soon-overlay">
-                        <span class="coming-soon-text">Coming Soon</span>
-                        <span class="coming-soon-subtext">We're working on it!</span>
-                    </div>
-                    <span class="coming-soon-badge">Coming Soon</span>
-                </div>
             </div>
         </section>
     </section>
+    
 
     <section class="px-[3rem] md:px-[3rem] lg:px-[3rem] lg:px-[10rem] mb-10" id="feature">
         <section class="wrapper">
@@ -296,11 +353,13 @@
                         "your health, your way!"</p>
                     <div
                         class="flex flex-row md:flex-row gap-4 md:gap-8 justify-center md:justify-end items-center -top-6 md:-top-0 lg:-top-0 relative">
-                        <a   onclick="navigateWithLoading('https://play.google.com/store/apps/details?id=com.quadvare.mediza.app&pli=1')" class="transform hover:scale-105 transition-transform w-32 md:w-auto">
+                        <a onclick="navigateWithLoading('https://play.google.com/store/apps/details?id=com.quadvare.mediza.app&pli=1')"
+                            class="transform hover:scale-105 transition-transform w-32 md:w-auto">
                             <img src="./assets/images/ios.svg" alt="Download on App Store"
                                 class="h-10 h-[6.2rem]  md:h-[8.3rem] lg:h-[8.3rem] md:-mt-1  lg:-mt-20 lg:top-11 relative">
                         </a>
-                        <a  onclick="navigateWithLoading('https://play.google.com/store/apps/details?id=com.quadvare.mediza.app&pli=1')" class="transform hover:scale-105 transition-transform w-32 md:w-auto">
+                        <a onclick="navigateWithLoading('https://play.google.com/store/apps/details?id=com.quadvare.mediza.app&pli=1')"
+                            class="transform hover:scale-105 transition-transform w-32 md:w-auto">
                             <img src="./assets/images/android.png" alt="Get it on Google Play"
                                 class="h-10 md:h-14 lg:h-14">
                         </a>
@@ -924,6 +983,15 @@
         <img src="./assets/images/logo.png" class="loader" alt="Loading...">
     </div>
     <script src="./assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const carousel = document.querySelector('#logoCarousel');
+        const carouselInstance = new bootstrap.Carousel(carousel, {
+            interval: 2000,
+            ride: 'carousel',
+            pause: false
+        });
+    </script>
 
 
 
