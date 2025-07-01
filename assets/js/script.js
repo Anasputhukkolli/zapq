@@ -238,7 +238,7 @@ function isElementInViewport(el) {
 }
 
 // Restart animation when scrolled into view
-window.addEventListener('scroll', function() {
+window.addEventListener('', function() {
     const counterSection = document.querySelector('.counter-section');
     if (isElementInViewport(counterSection)) {
         animateCounter('doctors-counter', 70, 2000);
