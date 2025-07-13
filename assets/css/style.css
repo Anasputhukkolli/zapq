@@ -85,18 +85,22 @@ a {
 .counter-item {
     transition: transform 0.3s;
 }
+
 .counter-item:hover {
     transform: translateY(-5px);
 }
+
 .counter-value {
     font-size: 2.5rem;
     color: #1DEE7B;
 }
+
 .counter-label {
     font-size: 1rem;
     color: #6c757d;
     margin-top: 5px;
 }
+
 @media (max-width: 768px) {
     .counter-value {
         font-size: 1.8rem;
@@ -126,7 +130,7 @@ video {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
@@ -140,17 +144,17 @@ video {
 
 
 .features-section {
-    margin: 78px ;
-  }
+    margin: 78px;
+}
 
-  .features-container {
+.features-container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
     width: 100%;
-  }
+}
 
-  .feature-card {
+.feature-card {
     background-color: white;
     border-radius: 10px;
     padding: 2rem 1.5rem;
@@ -159,14 +163,14 @@ video {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     position: relative;
     overflow: hidden;
-  }
+}
 
-  .feature-card:hover {
+.feature-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  }
+}
 
-  .icon-circle {
+.icon-circle {
     background-color: #1DEE7B;
     width: 4rem;
     height: 4rem;
@@ -176,31 +180,31 @@ video {
     justify-content: center;
     margin: 0 auto 1.5rem;
     transition: all 0.3s ease;
-  }
+}
 
-  .feature-card:hover .icon-circle {
+.feature-card:hover .icon-circle {
     transform: scale(1.1);
-  }
+}
 
-  .icon {
+.icon {
     color: white;
     font-size: 1.5rem;
-  }
+}
 
-  .feature-title {
+.feature-title {
     font-weight: 500;
     font-size: 1.25rem;
     margin-bottom: 1rem;
-  }
+}
 
-  .feature-description {
+.feature-description {
     color: #6c757d;
     font-weight: 400;
     font-size: 0.95rem;
     line-height: 1.6;
-  }
+}
 
-  .coming-soon-overlay {
+.coming-soon-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -213,20 +217,20 @@ video {
     justify-content: center;
     color: white;
     border-radius: 10px;
-  }
+}
 
-  .coming-soon-text {
+.coming-soon-text {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-  }
+}
 
-  .coming-soon-subtext {
+.coming-soon-subtext {
     font-size: 0.9rem;
     opacity: 0.8;
-  }
+}
 
-  .coming-soon-badge {
+.coming-soon-badge {
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -236,56 +240,59 @@ video {
     border-radius: 1rem;
     font-size: 0.75rem;
     font-weight: 500;
-  }
+}
 
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
     .features-section {
-      padding: 5rem 2rem;
+        padding: 5rem 2rem;
     }
 
     .features-container {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
     }
 
     .feature-card {
-      padding: 2.5rem 2rem;
+        padding: 2.5rem 2rem;
     }
-  }
+}
 
-  @media (min-width: 1024px) {
+@media (min-width: 1024px) {
     .features-section {
-      padding: 6rem 3rem;
+        padding: 6rem 3rem;
     }
 
     .features-container {
-      grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
-  }
-#founders{
+}
+
+#founders {
     margin: 48px 0;
 
 }
-#founders .content-section{
+
+#founders .content-section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-#founders h1{
+#founders h1 {
     font-size: 56px;
     color: #121514;
     font-weight: 300;
 }
-#founders p{
-    font-size:20px;
+
+#founders p {
+    font-size: 20px;
     color: #5D6561 !important;
     margin-top: 20px;
 }
 
 .zappq-color {
     color: #1DEE7B;
-    
+
 }
 
 .button-zappq {
@@ -307,11 +314,13 @@ video {
     min-width: 100%;
     box-sizing: border-box;
 }
-.slide h3{
+
+.slide h3 {
     font-size: 14px;
     color: #000;
-} 
-.slide p{
+}
+
+.slide p {
     font-size: 12px !important;
     color: #000;
     opacity: 60%;
@@ -332,9 +341,7 @@ video {
     text-align: center;
 }
 
-.team-image {
-    
-}
+.team-image {}
 
 .nav-buttons {
     display: flex;
@@ -359,10 +366,12 @@ video {
     .main-container {
         flex-direction: column;
     }
+
     .content-section {
         width: 100%;
         margin-bottom: 30px;
     }
+
     .slider-section {
         width: 100%;
     }
@@ -474,12 +483,14 @@ video {
     color: #000;
     opacity: 60%;
 }
+
 .testimonial-card .quote-text {
     font-style: italic;
     font-size: 20px;
     color: #000;
     margin-top: 12px;
 }
+
 .user-info {
     display: flex;
     align-items: center;
@@ -487,9 +498,11 @@ video {
     flex-wrap: wrap;
 
 }
+
 .user-info img {
     margin-right: 18px;
 }
+
 .user-info h4 {
     font-size: 14px;
     color: #000;
@@ -777,10 +790,11 @@ footer .media div h3 {
 
     }
 
-    #testimonial .top h3  {
+    #testimonial .top h3 {
         display: block;
         font-size: 32px;
     }
+
     #testimonial .top h3 span {
         display: none;
     }
@@ -846,15 +860,187 @@ footer .media div h3 {
     z-index: 1000;
     justify-content: center;
     align-items: center;
-  }
-  
-  .loader {
+}
+
+.loader {
     width: 80px;
     height: 80px;
     animation: spin 1.5s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.slider-container {
+    overflow: hidden;
+    position: relative;
+    padding-top: 88px;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.slider-card {
+    min-width: 100%;
+    flex: 0 0 100%;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.slider-nav:hover {
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.slider-prev {
+    left: 10px;
+}
+
+.slider-next {
+    right: 10px;
+}
+
+.slider-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: white;
+    transform: scale(1.2);
+}
+
+@media (min-width: 768px) {
+    .slider-card {
+        min-width: 50%;
+        flex: 0 0 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .slider-card {
+        min-width: 33.333%;
+        flex: 0 0 33.333%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .slider-card {
+        min-width: 25%;
+        flex: 0 0 25%;
+    }
+}
+
+
+
+
+.logo-card img {
+    width: 200px;
+}
+.card1 img {
+    width: 400px;
+}
+.card2 img {
+    padding-top: 88px;
+}
+
+
+
+
+.header-title {
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+.header-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+}
+
+.btn-custom {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.tips-section {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tip-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.tip-item:last-child {
+    border-bottom: none;
+}
+
+.tip-number {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 15px;
+}
