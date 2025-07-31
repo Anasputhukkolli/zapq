@@ -43,6 +43,7 @@
             <li><a id="feature" class="text-gray-700 hover:text-black ">Feature</a></li>
             <li><a id="contact" class="text-gray-700 hover:text-black ">Contact</a></li>
             <li><button
+                    onclick="navigateWithLoading('https://play.google.com/store/apps/details?id=com.quadvare.mediza.app&pli=1')"
                     class="md:hidden bg-black text-white px-6 font-semibold font-[poppinsmedium] py-3 rounded-full hover:bg-gray-800 cursor-pointer">Get
                     started</button>
             </li>
@@ -69,14 +70,14 @@
             </button>
             <div class="container py-5">
                 <div class="counter-section">
-                    <div class="row justify-content-center">
+                    <div class="row flex justify-content-center">
                         <div class="col-md-4 col-sm-12 counter-item">
                             <p class="counter-value"><span id="doctors-counter">0</span>+</p>
                             <p class="counter-label">Doctors</p>
                         </div>
                         <div class="col-md-4 col-sm-12 counter-item">
                             <p class="counter-value"><span id="workers-counter">0</span>+</p>
-                            <p class="counter-label">Hard worker's</p>
+                            <p class="counter-label">Users</p>
                         </div>
                         <div class="col-md-4 col-sm-12 counter-item">
                             <p class="counter-value"><span id="hours-counter">0</span>/7</p>
@@ -127,7 +128,13 @@
                                 </div>
                             </div>
                         </div>
-
+                        <div class="slider-card">
+                            <div class="logo-card text-center mx-3">
+                                <div class="logo-example">
+                                    <img src="./assets/images/alshifa.png" alt="Noor Eye Clinic & Opticals">
+                                </div>
+                            </div>
+                        </div>
                         <div class="slider-card">
                             <div class="logo-card text-center mx-3">
                                 <div class="logo-example">
@@ -144,6 +151,7 @@
                                 </div>
                             </div>
                         </div>
+
 
                         <div class="slider-card">
                             <div class="logo-card text-center mx-3">
@@ -164,7 +172,7 @@
                         </div>
                     </div>
 
-                    
+
                 </div>
             </div>
         </div>
@@ -177,27 +185,24 @@
     <section class="pt-6" id="testimonial">
         <section class="wrapper">
             <div
-                class="text-center     font-[poppinsmedium] text-[#5D6561] pb-28  text-[1rem] md:text-[1.5rem] lg:text-[1.8rem] relative top-[4.9rem] md:top-[7.1rem] lg:top-[2.6rem]">
-                Our Services</div>
+                class="text-center font-poppinsmedium text-[#5D6561] pb-28 text-[1rem] md:text-[1.5rem] lg:text-[1.8rem] relative top-[4.9rem] md:top-[7.1rem] lg:top-[2.6rem]">
+                Our Services
+            </div>
             <div class="bottom">
-
-                <div style="width: auto;" class="testimonial-slider">
-                    <!-- Testimonial 1 -->
+                <div class="testimonial-slider">
+                    <!-- Service 1 -->
                     <div>
                         <div class="feature-card hover-effect">
-                            <div
-                                class="bg-[#1DEE7B] rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mx-auto mb-4 icon-circle">
-                                <i class="fa-solid fa-calendar text-white text-2xl md:text-3xl icon"></i>
+                            <div class="icon-circle">
+                                <i class="fa-solid fa-calendar icon"></i>
                             </div>
                             <h3 class="feature-title">Smart Doctor Booking</h3>
                             <p class="feature-description">Find doctors by specialization, location, and availability,
-                                then book
-                                instantly.
-                                Get a token and real-time updates for a seamless experience.</p>
+                                then book instantly. Get a token and real-time updates for a seamless experience.</p>
                         </div>
                     </div>
 
-                    <!-- Testimonial 2 -->
+                    <!-- Service 2 -->
                     <div>
                         <div class="feature-card hover-effect">
                             <div class="icon-circle">
@@ -205,28 +210,9 @@
                             </div>
                             <h3 class="feature-title">Real-Time Queue Tracking</h3>
                             <p class="feature-description">ZappQ keeps you updated with live token tracking. Monitor
-                                your wait
-                                time, get
-                                notifications, and stay informed—no more long waits or uncertainty!</p>
+                                your wait time, get notifications, and stay informed—no more long waits!</p>
                         </div>
                     </div>
-
-                    <!-- Testimonial 3 -->
-                    <div>
-                        <div class="feature-card hover-effect">
-                            <div class="icon-circle">
-                                <i class="fa-solid fa-pills icon"></i>
-                            </div>
-                            <h3 class="feature-title">Doorstep Pharmacy Delivery</h3>
-                            <p class="feature-description">Upload your prescription and our <span
-                                    class="highlight">smart chat
-                                    system</span> instantly appears to confirm your order details. Once verified, your
-                                medicines
-                                are delivered right to your doorstep—fast, secure, and hassle-free!</p>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial 4 -->
                     <div>
                         <div class="feature-card hover-effect">
                             <div class="icon-circle clinic">
@@ -234,13 +220,10 @@
                             </div>
                             <h3 class="feature-title">Smart Clinic Home Testing</h3>
                             <p class="feature-description">Order lab tests from home and our <span
-                                    class="highlight">certified
-                                    medical staff</span> visits your location within a day. Get your samples collected
-                                professionally and receive accurate results quickly—healthcare made convenient!</p>
+                                    class="highlight">certified medical staff</span> visits within a day. Professional
+                                sample collection with accurate results!</p>
                         </div>
                     </div>
-
-                    <!-- Testimonial 5 -->
                     <div>
                         <div class="feature-card hover-effect">
                             <div class="icon-circle">
@@ -248,12 +231,30 @@
                             </div>
                             <h3 class="feature-title">Smart Health Records</h3>
                             <p class="feature-description">ZappQ securely stores medical records and appointment
-                                details,
-                                ensuring easy
-                                access while maintaining privacy and compliance with security standards.</p>
-
+                                details, ensuring easy access while maintaining privacy and compliance with security
+                                standards.</p>
                         </div>
                     </div>
+                    <!-- Service 3 -->
+                    <div>
+                        <div class="feature-card hover-effect">
+                            <div class="icon-circle">
+                                <i class="fa-solid fa-pills icon"></i>
+                            </div>
+                            <h3 class="feature-title">Doorstep Pharmacy Delivery</h3>
+                            <p class="feature-description">Upload your prescription and our <span
+                                    class="highlight">smart chat system</span> instantly confirms your order. Medicines
+                                delivered right to your doorstep—fast and secure!</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+
+
+                    <!-- Service 5 -->
+
+
+                    <!-- Service 6 -->
                     <div>
                         <div class="feature-card hover-effect">
                             <div class="icon-circle">
@@ -261,9 +262,7 @@
                             </div>
                             <h3 class="feature-title">AI Symptom Checker</h3>
                             <p class="feature-description">ZappQ's AI chatbot analyzes symptoms instantly, providing
-                                quick
-                                health insights
-                                and guidance before you consult a doctor.</p>
+                                quick health insights and guidance before you consult a doctor.</p>
                             <div class="coming-soon-overlay">
                                 <span class="coming-soon-text">Coming Soon</span>
                                 <span class="coming-soon-subtext">We're working on it!</span>
@@ -272,7 +271,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     </section>

@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   aboutLink.addEventListener("click", function (e) {
     e.preventDefault();
-    const aboutSection = document.querySelector("section#about");
+    const aboutSection = document.querySelector("section#testimonial");
     aboutSection.scrollIntoView({
       behavior: "smooth",
     });
@@ -220,8 +220,8 @@ function animateCounter(elementId, finalValue, duration) {
 
 // Start animations when page loads
 document.addEventListener("DOMContentLoaded", function () {
-  animateCounter("doctors-counter", 70, 2000);
-  animateCounter("workers-counter", 24, 1500);
+  animateCounter("doctors-counter", 100, 2000);
+  animateCounter("workers-counter", 1000, 1500);
   animateCounter("hours-counter", 24, 1500);
 });
 
@@ -394,3 +394,5 @@ setInterval(() => {
 
 // Initialize slider
 updateSlider();
+
+
