@@ -325,74 +325,42 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("Video player script loaded");
 });
 
-let currentSlideIndex = 0;
-const slider = document.getElementById("logoSlider");
-const totalSlides = 6;
-let slidesToShow = getSlidesToShow();
-
-function getSlidesToShow() {
-  if (window.innerWidth >= 1200) return 4;
-  if (window.innerWidth >= 992) return 3;
-  if (window.innerWidth >= 768) return 2;
-  return 1;
-}
-
-function updateSlider() {
-  const slideWidth = 100 / slidesToShow;
-  const maxSlide = totalSlides - slidesToShow;
-
-  if (currentSlideIndex > maxSlide) {
-    currentSlideIndex = maxSlide;
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.getElementById("logoSlider");
+  if (!slider) {
+    return; // Exit if the slider is not on the current page
   }
 
-  slider.style.transform = `translateX(-${currentSlideIndex * slideWidth}%)`;
+  const slides = slider.querySelectorAll(".slider-card");
+  const totalSlides = slides.length;
+  let currentSlideIndex = 0;
 
-  // Update dots
-  const dots = document.querySelectorAll(".dot");
-  dots.forEach((dot, index) => {
-    dot.classList.toggle("active", index === currentSlideIndex);
-  });
-}
-
-function nextSlide() {
-  const maxSlide = totalSlides - slidesToShow;
-  if (currentSlideIndex < maxSlide) {
-    currentSlideIndex++;
-    updateSlider();
+  function getSlidesToShow() {
+    if (window.innerWidth >= 1200) return 4;
+    if (window.innerWidth >= 992) return 3;
+    if (window.innerWidth >= 768) return 2;
+    return 1;
   }
-}
 
-function prevSlide() {
-  if (currentSlideIndex > 0) {
-    currentSlideIndex--;
-    updateSlider();
+  function updateSlider() {
+    const slidesToShow = getSlidesToShow();
+    const maxSlide = totalSlides > slidesToShow ? totalSlides - slidesToShow : 0;
+
+    if (currentSlideIndex > maxSlide) {
+      currentSlideIndex = maxSlide;
+    }
+
+    if (currentSlideIndex >= maxSlide) {
+      currentSlideIndex = 0;
+    } else {
+      currentSlideIndex++;
+    }
+
+    const slideWidth = 100 / slidesToShow;
+    slider.style.transform = `translateX(-${currentSlideIndex * slideWidth}%)`;
   }
-}
 
-function currentSlide(index) {
-  const maxSlide = totalSlides - slidesToShow;
-  currentSlideIndex = Math.min(index - 1, maxSlide);
-  updateSlider();
-}
-
-// Handle window resize
-window.addEventListener("resize", () => {
-  slidesToShow = getSlidesToShow();
-  updateSlider();
+  window.addEventListener("resize", updateSlider);
+  setInterval(updateSlider, 3000);
+  updateSlider(); // Initial call
 });
-
-// Auto-slide every 8 seconds
-setInterval(() => {
-  const maxSlide = totalSlides - slidesToShow;
-  if (currentSlideIndex >= maxSlide) {
-    currentSlideIndex = 0;
-  } else {
-    currentSlideIndex++;
-  }
-  updateSlider();
-}, 3000);
-
-// Initialize slider
-updateSlider();
-
-

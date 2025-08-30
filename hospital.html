@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="./assets/images/logo.png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zappq</title>
+    <link rel="stylesheet" href="./assets/css/font.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+</head>
+
+<body class="bg-[url('./assets/images/bgdesign.svg')] bg-no-repeat bg-cover min-h-screen bg-fixed">
+    <div class="min-h-screen ">
+        <nav
+            class="sticky top-10 z-10 flex items-center justify-between p-3 max-w-[80rem] mx-auto bg-transparent backdrop-blur-md shadow-xs rounded-full">
+            <div class="flex items-center cursor-pointer" onclick="window.location.reload()">
+                <img src="./assets/images/logo.png" alt="Logo" class="h-10 md:h-16 mr-3">
+                <span class="text-[1.2rem] md:text-[1.7rem] font-medium font-[michromaregular]">ZappQ</span>
+            </div>
+            <div class="menu-icon relative -left-10 md:hidden" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </div>
+            <ul class="hidden md:flex justify-center space-x-8 font-[poppinsregular] navbar-menu cursor-pointer ">
+                <li><a onclick="navigateWithLoading('./index.html')" class="text-gray-700 hover:text-black ">Home</a>
+                </li>
+                <li><a onclick="navigateWithLoading('./index.html')" class="text-gray-700 hover:text-black ">About</a>
+                </li>
+                <li><a onclick="navigateWithLoading('./index.html')" class="text-gray-700 hover:text-black ">Feature</a>
+                </li>
+                <li><a onclick="navigateWithLoading('./index.html')" class="text-gray-700 hover:text-black ">Contact</a>
+                </li>
+                <li><button
+                        class="md:hidden bg-black text-white px-6 font-semibold font-[poppinsmedium] py-3 rounded-full hover:bg-gray-800 cursor-pointer">Get
+                        started</button>
+                </li>
+            </ul>
+            <button
+                class="hidden md:inline-block bg-black text-white px-6 font-semibold font-[poppinsmedium] py-3 rounded-full hover:bg-gray-800 ">Get
+                started</button>
+        </nav>
+
+        <!-- Terms and Conditions Content -->
+
+        <section id="hospital">
+            <section class="wrapper">
+                <div class="max-w-6xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden mt-16">
+                    <!-- Header -->
+                    <div class="bg-gradient-to-r  text-black p-6">
+                        <h1 class="text-2xl font-bold mb-2">Join our healthcare network and make it easier for patients
+                            to find
+                            and connect with your hospital or clinic.</h1>
+                    </div>
+
+                    <div class="flex flex-col lg:flex-row">
+                        <!-- Form Section -->
+                        <div class="lg:w-2/3 p-6">
+                            <form action="https://formspree.io/f/mdklgone" method="POST" class="space-y-6">
+                                <!-- Hospital/Clinic Name -->
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-medium mb-2">
+                                        Hospital/Clinic Name<span class="text-red-500">*</span>
+                                    </label>
+                                    <input type="text" name="hospital_name"
+                                        placeholder="Enter the official name of your hospital or clinic"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                                        required>
+                                </div>
+
+                                <!-- Full Name and Role Row -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-gray-700 text-sm font-medium mb-2">
+                                            Full name<span class="text-red-500">*</span>
+                                        </label>
+                                        <input type="text" name="full_name" placeholder="Enter your name."
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                                            required>
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 text-sm font-medium mb-2">
+                                            Role<span class="text-red-500">*</span>
+                                        </label>
+                                        <select name="role"
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white"
+                                            required>
+                                            <option value="">Choose Role</option>
+                                            <option>Doctor</option>
+                                            <option>Administrator</option>
+                                            <option>Manager</option>
+                                            <option>Director</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Facility Type and Specialties Row -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-gray-700 text-sm font-medium mb-2">
+                                            Type of Facility
+                                        </label>
+                                        <select name="facility_type"
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white">
+                                            <option value="">Choose Facility</option>
+                                            <option>Hospital</option>
+                                            <option>Clinic</option>
+                                            <option>Diagnostic Center</option>
+                                            <option>Specialty Center</option>
+                                            <option>Emergency Center</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 text-sm font-medium mb-2">
+                                            Specialties / Departments
+                                        </label>
+                                        <input type="text" name="specialties" placeholder="Enter your specialties"
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
+                                    </div>
+                                </div>
+
+                                <!-- Address -->
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-medium mb-2">
+                                        Address<span class="text-red-500">*</span>
+                                    </label>
+                                    <input type="text" name="address"
+                                        placeholder="Full location with city, state, and pincode"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                                        required>
+                                </div>
+
+                                <!-- Contact Number -->
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-medium mb-2">
+                                        Contact Number<span class="text-red-500">*</span>
+                                    </label>
+                                    <input type="tel" name="contact_number" placeholder="Eg: +91 (755)899 5555"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                                        required>
+                                </div>
+
+                                <!-- Email -->
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-medium mb-2">
+                                        Email<span class="text-red-500">*</span>
+                                    </label>
+                                    <input type="email" name="email" placeholder="Enter official email address."
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                                        required>
+                                </div>
+
+                                <!-- Description -->
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-medium mb-2">
+                                        Description
+                                    </label>
+                                    <textarea name="description" placeholder="Enter small details..." rows="4"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"></textarea>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <button type="submit"
+                                    class="w-full bg-black text-white py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-200 text-lg">
+                                    Submit & Get Listed
+                                </button>
+                                <p id="status"></p>
+                            </form>
+
+                        </div>
+                        <script>
+                            const form = document.getElementById("hospitalForm");
+                            const status = document.getElementById("status");
+
+                            form.addEventListener("submit", async (e) => {
+                                e.preventDefault();
+                                const data = new FormData(form);
+                                const response = await fetch(form.action, {
+                                    method: form.method,
+                                    body: data,
+                                    headers: { 'Accept': 'application/json' }
+                                });
+                                if (response.ok) {
+                                    status.innerHTML = "✅ Thank you! Your form has been submitted.";
+                                    form.reset();
+                                } else {
+                                    status.innerHTML = "❌ Oops! Something went wrong.";
+                                }
+                            });
+                        </script>
+                        <!-- Contact Section -->
+                        <div class="lg:w-1/3 bg-gray-50 p-6 border-l border-gray-200">
+                            <div class="space-y-8">
+                                <!-- Let's Talk Section -->
+                                <h3 class="section-title">Let's talk! We're here to assist you</h3>
+
+                                <div class="contact-option-item">
+                                    <a href="https://wa.me/919037913794" target="_blank" class="text-decoration-none">
+
+                                        <i class="fab fa-whatsapp"></i>
+
+                                        <span>Chat on WhatsApp</span>
+                                    </a>
+                                </div>
+
+
+
+                                <div class="contact-option-item">
+                                    <a href="https://www.linkedin.com/company/zappq/" class="text-decoration-none">
+                                        <i class="fab fa-linkedin"></i>
+                                        <span>Message on LinkedIn</span>
+                                    </a>
+                                </div>
+
+                                <div class="contact-option-item">
+                                    <a href="https://www.instagram.com/zappq.app?igsh=MWo3bWNjeTd0M2ZzYw=="
+                                        class="text-decoration-none">
+                                        <i class="fab fa-instagram"></i>
+                                        <span>Message on Instagram</span>
+                                    </a>
+                                </div>
+
+                                <h3 class="section-title mt-5">One call away for all your needs</h3>
+                                <div class="contact-option-item">
+                                    <a href="tel:+917558995555" class="text-decoration-none">
+                                        <i class="fas fa-phone-alt"></i>
+                                        <span>+91 755899 5555</span>
+                                    </a>
+                                </div>
+
+                                <h3 class="section-title mt-5">Drop by and say hello</h3>
+                                <div class="contact-option-item">
+                                    <a href="" class="text-decoration-none">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Top floor, Puthenveettil towers, bypass Rd, Perinthalmanna, Kerala
+                                            679322</span>
+
+                                    </a>
+                                </div>
+
+                                <!-- Disclaimer -->
+                                <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+                                    <p class="text-sm text-gray-700">
+                                        <span class="text-red-500 font-semibold">*</span>After submitting this form, our
+                                        team
+                                        will review your details and contact you shortly for further confirmation.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+        <footer class="footer">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap mb-5">
+                    <!-- Logo and Description -->
+                    <div class="w-full md:w-1/4 mb-5 md:mb-0  ">
+                        <div class="flex items-center mb-4">
+                            <span class="text-gray-800 mr-2">
+                                <img src="./assets/images/qv on 1.png" alt="">
+                            </span>
+                            <div class="logo">
+                                <img src="./assets/images/qvwhole 1.png" alt="">
+                            </div>
+                        </div>
+                        <p class="text-sm mb-4">Quadvare is a technology-driven company focused on creating innovative
+                            digital solutions.</p>
+                        <div class="support-links text-sm">
+                            <button onclick="navigateWithLoading('./support.html')">Support</button>
+                            <button onclick="navigateWithLoading('./terms.html')" href="#">Terms & Condition</button>
+                            <button onclick="navigateWithLoading('./privacy.html')" href="#">Privacy Policy</button>
+                        </div>
+
+                    </div>
+
+                    <!-- Product Column -->
+                    <div class="media">
+                        <div class="">
+                            <h3 class="footer-title">Product</h3>
+                            <ul class="footer-links space-y-2">
+                                <li><button onclick="navigateWithLoading('./index.html')">Overview</button></li>
+                                <li><button onclick="navigateWithLoading('./index.html')">Feature</button></li>
+                                <li><button onclick="navigateWithLoading('./index.html')">Tutorial</button></li>
+                            </ul>
+                        </div>
+
+                        <!-- Company Column -->
+                        <div class="">
+                            <h3 class="footer-title">Company</h3>
+                            <ul class="footer-links space-y-2">
+                                <li><a href="#about">About us</a></li>
+                                <li><button onclick="navigateWithLoading('./support.html')">Support</button></li>
+                                <li><a onclick="navigateWithLoading('./mission.html')">Mission & Vision</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Resources Column -->
+                        <!-- <div class="">
+                        <h3 class="footer-title">Resources</h3>
+                        <ul class="footer-links space-y-2">
+                            <li><button onclick="navigateWithLoading('')">Blog</button></li>
+                            <li><button onclick="navigateWithLoading('')">Newsletter</button></li>
+                            <li><button onclick="navigateWithLoading('./support.html')">Support</button></li>
+                        </ul>
+                    </div> -->
+                        <div class="">
+                            <h3 class="footer-title">Social Media</h3>
+                            <ul class="footer-links space-y-2">
+                                <li><button
+                                        onclick="navigateWithLoading('https://www.linkedin.com/company/zappq/')">LinkedIn</button>
+                                </li>
+                                <li><button
+                                        onclick="navigateWithLoading('https://www.facebook.com/share/163Pbci9RT/?mibextid=wwXIfr')">Facebook</button>
+                                </li>
+                                <li><button
+                                        onclick="navigateWithLoading('https://www.instagram.com/zappq.app?igsh=MWo3bWNjeTd0M2ZzYw==')">Instagram</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- <div class="">
+                        <h3 class="footer-title">Legal</h3>
+                        <ul class="footer-links space-y-2">
+                            <li><button onclick="navigateWithLoading('')">Terms</button></li>
+                            <li><button onclick="navigateWithLoading('')">Cookies</button></li>
+                            <li><button onclick="navigateWithLoading('')">Licenses</button></li>
+                        </ul>
+                    </div> -->
+                    </div>
+
+                    <!-- Social Media Column -->
+
+                </div>
+                <hr />
+                <!-- Copyright and Social Icons -->
+                <div class="copyright">
+                    <div class="mb-4 md:mb-0">
+                        <p>@2025 Copyright<b style="color:#1DEE7B;">ZappQ </b>All Rights Reserved</p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <button
+                            onclick="navigateWithLoading('https://www.facebook.com/share/163Pbci9RT/?mibextid=wwXIfr')"
+                            class="social-icon">
+                            <img src="./assets/images/Vector (1).svg" alt="">
+                        </button>
+                        <button onclick="navigateWithLoading('')" class="social-icon">
+                            <img src="./assets/images/Vector (2).svg" alt="">
+                        </button>
+                        <button onclick="navigateWithLoading('https://www.linkedin.com/company/zappq/')"
+                            class="social-icon">
+                            <img src="./assets/images/Vector (3).svg" alt="">
+                        </button>
+                        <button
+                            onclick="navigateWithLoading('https://www.instagram.com/zappq.app?igsh=MWo3bWNjeTd0M2ZzYw==')"
+                            class="social-icon">
+                            <img src="./assets/images/Vector.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="loader-container" id="loaderContainer">
+            <img src="./assets/images/logo.png" class="loader" alt="Loading...">
+        </div>
+        <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

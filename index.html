@@ -2,6 +2,17 @@
 <html lang="en">
 
 <head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-27N6N2N33R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-27N6N2N33R');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zappq</title>
@@ -42,14 +53,12 @@
             <li><a id="about" class="text-gray-700 hover:text-black ">About</a></li>
             <li><a id="feature" class="text-gray-700 hover:text-black ">Feature</a></li>
             <li><a id="contact" class="text-gray-700 hover:text-black ">Contact</a></li>
-            <li><button
-                    onclick="navigateWithLoading('https://play.google.com/store/apps/details?id=com.quadvare.mediza.app&pli=1')"
+            <li><button onclick="navigateWithLoading('https://zappq.com/qr')"
                     class="md:hidden bg-black text-white px-6 font-semibold font-[poppinsmedium] py-3 rounded-full hover:bg-gray-800 cursor-pointer">Get
                     started</button>
             </li>
         </ul>
-        <button
-            onclick="navigateWithLoading('https://play.google.com/store/apps/details?id=com.quadvare.mediza.app&pli=1')"
+        <button onclick="navigateWithLoading('https://zappq.com/qr')"
             class="hidden md:inline-block bg-black text-white px-6 font-semibold font-[poppinsmedium] py-3 rounded-full hover:bg-gray-800 ">Get
             started</button>
     </nav>
@@ -64,9 +73,10 @@
             <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-xl">Tired of waiting in long queues to book a doctor's
                 appointment? With our app, you can schedule your consultation anytime, anywhere in just a few clicks.
             </p>
-            <button class="bg-black text-white px-6 py-3 rounded-full flex items-center space-x-2 hover:bg-gray-800">
-                <i class="fa-solid fa-circle-play"></i>
-                <span>Check out ZappQ</span>
+            <button onclick="window.location.href='https://zappq.com/qr'"
+                class="bg-black text-white px-6 py-3 rounded-full flex items-center space-x-2 hover:bg-gray-800">
+                <i class="fa-solid fa-download"></i>
+                <span>Download ZappQ</span>
             </button>
             <div class="container py-5">
                 <div class="counter-section">
@@ -96,12 +106,11 @@
     <div class="logo-container">
         <div class="wrapper">
             <div class="container">
-                <div
-                    class="text-center text-[1rem] md:text-[1.3rem] font-[poppinsmedium] text-[#5D6561] relative top-[4.9rem] md:top-[7.1rem] lg:top-[2.6rem]">
+                <div class="text-center text-[1rem] md:text-[1.3rem] font-[poppinsmedium] text-[#5D6561] mb-16">
                     Trusted by leaders in the industry
                 </div>
 
-                <div class="slider-container pt-28">
+                <div class="slider-container">
                     <div class="slider-wrapper" id="logoSlider">
                         <div class="slider-card">
                             <div class="logo-card text-center mx-3">
@@ -182,7 +191,7 @@
 
 
 
-    <section class="pt-6" id="testimonial">
+    <section class="pt-6" id="services">
         <section class="wrapper">
             <div
                 class="text-center font-poppinsmedium text-[#5D6561] pb-28 text-[1rem] md:text-[1.5rem] lg:text-[1.8rem] relative top-[4.9rem] md:top-[7.1rem] lg:top-[2.6rem]">
@@ -295,106 +304,48 @@
         </section>
     </section>
 
-    <section
-        class="relative w-full h-[35rem] md:h-[40rem] lg:h-[28.7rem] top-[8rem] md:top-[12rem] lg:top-[18rem] mb-[8rem] md:mb-[16rem] lg:mb-[24rem] bg-contain md:bg-contain lg:bg-cover bg-center bg-no-repeat px-4"
+    <section class="relative py-20 md:py-28 lg:py-32 bg-contain bg-center bg-no-repeat"
         style="background-image: url('./assets/images/bgcurve.svg');">
-        <div
-            class="container mx-auto px-4 md:px-4 lg:px-16 -top-[3rem] md:-top-[6rem] lg:-top-[10rem] relative flex flex-col md:flex-row items-center justify-between">
-            <!-- Left side content -->
-            <div
-                class="w-full md:w-[59%] lg:w-[54.5%] text-left mb-8 md:mb-0 relative md:-left-12 lg:left-10 -top-[2rem] md:top-0">
-                <div class="space-x-2  mb-4 font-[poppinsregular] flex flex-wrap gap-2">
-                    <span class="text-base md:text-[1.35rem] lg:text-xl text-[#1DEE7B]">#easyHealthcare</span>
-                    <span class="text-base md:text-[1.35rem] lg:text-xl text-[#1DEE7B]">#SmartBooking</span>
-                    <span class="text-base md:text-[1.35rem] lg:text-xl text-[#1DEE7B]">#RealTimeUpdates</span>
-                </div>
-                <p
-                    class="text-gray-600 text-base md:text-xl lg:text-xl mb-6 md:max-w-lg lg:max-w-2xl font-[poppinsregular]">
-                    Using ZappQ is simple and hassle-free. Browse doctors by specialization, location, or availability,
-                    then book an appointment in seconds. Get a virtual token, track your queue position in real time,
-                    and receive notifications when it's your turn. You can also order medicines with doorstep pharmacy
-                    delivery, book lab tests with smart clinic home testing, and securely access all your health records
-                    anytime. With AI-powered assistance, managing healthcare has never been easier!
+
+        <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
+
+            <div class="w-full lg:w-1/2 text-center lg:text-left">
+
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-800 mb-6 leading-tight">
+                    Navigate Your Health <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-500">With
+                        Ease</span>
+                </h1>
+
+                <p class="text-base md:text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+                    Using ZappQ is simple. Browse doctors, book in seconds, and get a virtual token. Track your queue in
+                    real-time and receive notifications when it's your turn. Manage prescriptions, lab tests, and health
+                    records all in one place.
                 </p>
-                <div
-                    class="text-xl md:text-4xl lg:text-[3.4rem] top-[0.6rem] md:top-[4rem] lg:top-[7rem] relative font-[poppinsregular] mb-4 space-y-2 lg:space-y-7">
-                    <p>INSIGHT: NAVIGATE YOUR</p>
-                    <p>HEALTH WITH EASE</p>
+
+                <div class="flex items-center justify-center lg:justify-start flex-wrap gap-3 mb-10">
+                    <span
+                        class="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1.5 rounded-full">#easyHealthcare</span>
+                    <span
+                        class="bg-cyan-100 text-cyan-800 text-sm font-medium px-3 py-1.5 rounded-full">#SmartBooking</span>
+                    <span
+                        class="bg-sky-100 text-sky-800 text-sm font-medium px-3 py-1.5 rounded-full">#RealTimeUpdates</span>
                 </div>
+
+
+
             </div>
 
-            <!-- Right side video and floating boxes -->
-            <div
-                class="w-full md:w-[48%] lg:w-1/2 relative md:left-14 lg:left-10 mt-4 md:mt-0 -top-[2rem] md:-top-12 lg:top-14">
-                <!-- Video container -->
-                <div class="relative" id="videoContainer">
-                    <video id="myVideo" preload="metadata" poster="./assets/images/ad.png">
-                        <source src="./assets/video/ad.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="play-button" id="playButton">
-                        <i class="fa-solid fa-play play-icon"></i>
-                    </div>
-                </div>
-
-                <!-- Floating appointment box -->
-                <div
-                    class="absolute top-8 -right-4 md:top-16 md:-right-10 lg:top-20 lg:-right-0 bg-white rounded-[0.8rem] md:rounded-[1rem] lg:rounded-[1.2rem] shadow-lg md:shadow-xl hover:shadow-xl md:hover:shadow-2xl transition-shadow duration-300">
-                    <button
-                        class="text-[#1DEE7B] font-[poppinsmedium] text-xs md:text-base lg:text-lg px-3 md:px-4 lg:px-6 py-2 md:py-3 lg:py-5 flex items-center">
-                        Get a Appointment
-                    </button>
-                </div>
-
-                <!-- Floating rating box -->
-                <div
-                    class="absolute -bottom-3 -left-4 md:-bottom-4 md:-left-16 lg:-bottom-6 lg:-left-6 bg-white rounded-[0.8rem] md:rounded-[0.9rem] lg:rounded-[1rem] shadow-lg md:shadow-xl px-4 md:px-4 lg:px-6 py-1 md:py-2 flex items-start space-x-2 md:space-x-3 lg:space-x-4 scale-75 md:scale-90 lg:scale-100">
-                    <div class="flex flex-col">
-                        <div class="flex items-center">
-                            <span class="text-xl md:text-3xl font-bold">4.4</span>
-                            <i class="fa-solid fa-star text-[#FFA500] ml-1 text-sm md:text-base"></i>
-                        </div>
-                        <span class="text-[10px] md:text-sm text-gray-500">32 reviews</span>
-                    </div>
-                    <div class="flex flex-col space-y-1">
-                        <div class="flex items-center space-x-1 md:space-x-2">
-                            <span class="text-[8px] md:text-xs w-2 md:w-3">5</span>
-                            <div class="w-16 md:w-32 bg-gray-200 rounded-full h-1 md:h-2">
-                                <div class="bg-[#1DEE7B] h-1 md:h-2 rounded-full" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-1 md:space-x-2">
-                            <span class="text-[8px] md:text-xs w-2 md:w-3">4</span>
-                            <div class="w-16 md:w-32 bg-gray-200 rounded-full h-1 md:h-2">
-                                <div class="bg-[#1DEE7B] h-1 md:h-2 rounded-full" style="width: 70%"></div>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-1 md:space-x-2">
-                            <span class="text-[8px] md:text-xs w-2 md:w-3">3</span>
-                            <div class="w-16 md:w-32 bg-gray-200 rounded-full h-1 md:h-2">
-                                <div class="bg-[#1DEE7B] h-1 md:h-2 rounded-full" style="width: 40%"></div>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-1 md:space-x-2">
-                            <span class="text-[8px] md:text-xs w-2 md:w-3">2</span>
-                            <div class="w-16 md:w-32 bg-gray-200 rounded-full h-1 md:h-2">
-                                <div class="bg-[#1DEE7B] h-1 md:h-2 rounded-full" style="width: 20%"></div>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-1 md:space-x-2">
-                            <span class="text-[8px] md:text-xs w-2 md:w-3">1</span>
-                            <div class="w-16 md:w-32 bg-gray-200 rounded-full h-1 md:h-2">
-                                <div class="bg-[#1DEE7B] h-1 md:h-2 rounded-full" style="width: 10%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="w-full lg:w-1/2 mt-4 lg:mt-0">
+                <img src="./assets/images/IMG-20250801-WA0046.jpg" alt="ZappQ App Screenshot"
+                    class="rounded-xl shadow-2xl mx-auto h-auto max-h-[500px]">
             </div>
+
         </div>
     </section>
 
     <section
-        class="bg-[#1DEE7B] rounded-[1.5rem] md:rounded-[2rem] mx-4 md:mx-16 lg:mx-32 p-6 md:p-12 mb-16 md:mb-20 relative overflow-hidden bg-[url('./assets/images/bgline.svg')] bg-no-repeat bg-cover before:content-[''] before:absolute before:inset-0 before:bg-[#1DEE7B] before:opacity-95 before:-z-[1] relative top-5 md:-top-16 lg:top-0 mt-[14rem] ">
+        class="bg-[#1DEE7B] rounded-[1.5rem] md:rounded-[2rem] mx-4 md:mx-16 lg:mx-32 p-6 md:p-12 mb-16 md:mb-20 overflow-hidden bg-[url('./assets/images/bgline.svg')] bg-no-repeat bg-cover relative -mt-16 md:-mt-24">
         <section class="wrapper">
             <div class="flex flex-col md:flex-row justify-between items-center relative z-10">
                 <!-- Left side content -->
@@ -407,21 +358,20 @@
                         assistance—all
                         in one app. download zappq today and take control of your healthcare journey!
                     </p>
-                    <p
-                        class="text-base md:text-2xl lg:text-xl text-[#121514] mb-8 md:mb-0 md:relative md:top-[8.9rem] lg:top-[4.5rem] font-[poppinsitalic]">
-                        "your health, your way!"</p>
-                    <div
-                        class=" md:flex-row gap-4 md:gap-8 justify-center md:justify-end items-center -top-6 md:-top-0 lg:-top-0 relative">
-                        <a onclick="navigateWithLoading('https://play.google.com/store/apps/details?id=com.quadvare.mediza.app&pli=1')"
-                            class=" bg-black text-white px-6 font-semibold font-[poppinsmedium] py-3 rounded-full hover:bg-gray-800 transform hover:scale-105 transition-transform w-32 md:w-auto">
-                        Download Now
-                        </a>
-                        
+                    <div class="mt-8 md:mt-12">
+                        <p class="text-base md:text-xl lg:text-xl text-[#121514] mb-6 font-[poppinsitalic]">"your
+                            health, your way!"</p>
+                        <div class="flex">
+                            <a onclick="navigateWithLoading('https://zappq.com/qr')"
+                                class="bg-black text-white px-6 font-semibold font-[poppinsmedium] py-3 rounded-full hover:bg-gray-800 transform hover:scale-105 transition-transform">
+                                Download Now
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Right side QR code -->
-                <div class="text-center relative -top-4 md:-top-0 lg:-top-0 -mt-5 md:-mt-0 lg:-mt-0 ">
+                <div class="text-center mt-8 md:mt-0">
                     <img src="./assets/images/qr.png" alt="QR Code" class="w-28 md:w-40 lg:w-48 mb-2">
 
                 </div>
@@ -809,6 +759,109 @@
     </section>
 
 
+    <section id="hospital">
+        <section class="wrapper">
+
+
+
+            <section class="py-5">
+                <div class="min-h-screen flex items-center px-4 lg:px-8">
+                    <div class="max-w-7xl mx-auto w-full">
+                        <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+                            <!-- Left Content -->
+                            <div class="flex-1 relative">
+                                <h1
+                                    class="text-3xl md:text-4xl lg:text-5xl font-light text-black uppercase tracking-wide mb-6 leading-tight">
+                                    JOIN OUR HEALTHCARE<br>PLATFORM
+                                </h1>
+
+                                <div class="text-emerald-400 text-base mb-8 font-normal">
+                                    #Listyourhospital #connectwithpatients #Growwithhealthcare
+                                </div>
+
+                                <p class="text-base text-gray-600 mb-16 leading-relaxed max-w-lg">
+                                    Reach more patients by adding your hospital or clinic to our app.
+                                    Submit your details and become part of our trusted healthcare network
+                                </p>
+
+                                <!-- Stethoscope image - positioned absolutely -->
+
+
+                                <div class="mb-16 space-y-10">
+                                    <div class="flex items-start gap-4">
+                                        <span class="text-emerald-400 text-lg font-bold mt-1">✓</span>
+                                        <div>
+                                            <h3 class="text-lg font-semibold text-black mb-2">Increase Visibility</h3>
+                                            <p class="text-base text-gray-600 leading-relaxed">
+                                                Get discovered by patients searching for trusted hospitals and clinics
+                                                in
+                                                your area.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start gap-4">
+                                        <span class="text-emerald-400 text-lg font-bold mt-1">✓</span>
+                                        <div>
+                                            <h3 class="text-lg font-semibold text-black mb-2">Build Patient Trust</h3>
+                                            <p class="text-base text-gray-600 leading-relaxed">
+                                                Showcase your specialties, facilities, and services to create a strong
+                                                digital presence.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start gap-4">
+                                        <span class="text-emerald-400 text-lg font-bold mt-1">✓</span>
+                                        <div>
+                                            <h3 class="text-lg font-semibold text-black mb-2">Simplify Access</h3>
+                                            <p class="text-base text-gray-600 leading-relaxed">
+                                                Make it easy for patients to find contact details, location, and
+                                                operating
+                                                hours at their fingertips.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start gap-4">
+                                        <span class="text-emerald-400 text-lg font-bold mt-1">✓</span>
+                                        <div>
+                                            <h3 class="text-lg font-semibold text-black mb-2">Grow with Us</h3>
+                                            <p class="text-base text-gray-600 leading-relaxed">
+                                                Be part of a growing healthcare network and connect with more people in
+                                                need
+                                                of your services.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button onclick="navigateWithLoading('./hospital.html')"
+                                    class="bg-black text-white border-none py-3 px-6 rounded-full text-sm font-medium cursor-pointer inline-flex items-center gap-2 hover:bg-gray-800 transition-colors">
+                                    <div class="bg-white p-2 rounded-full">
+                                        <img src="./assets/images/mdi_bank-add.png" alt="">
+
+                                    </div>
+                                    Get Listed Now
+                                </button>
+                            </div>
+
+                            <!-- Right Phone Mockup -->
+                            <div class="flex-1 flex justify-center lg:justify-end">
+                                <div class="phone-mockup relative" style="width: 280px; height: 560px;">
+                                    <!-- Phone Frame -->
+                                    <img src="./assets/images/framemobile.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </section>
+    </section>
+
     <section id="contact">
         <section class="wrapper">
             <div class="top">
@@ -819,7 +872,7 @@
             </div>
             <div class=" bottom row g-4 mt-3">
                 <div class="col-md-7">
-                    <div class="form-container ">
+                    <div class="form-container">
                         <form id="contactForm">
                             <div class="row mb-3">
                                 <div class="col-md-6 mb-3 mb-md-0">
@@ -842,8 +895,7 @@
 
                             <div class="mb-3">
                                 <label for="phone" class="form-label">Phone number</label>
-                                <input required type="tel" class="form-control" id="phone"
-                                    placeholder="+91 (5555) 000-0000">
+                                <input required type="tel" class="form-control" id="phone" placeholder="+91 0000000000">
                             </div>
 
                             <div class="mb-4">
@@ -854,26 +906,69 @@
 
                             <button type="submit" class="submit-btn">Send Message</button>
                         </form>
+                        <div id="form-message" class="mt-3"></div>
                     </div>
                 </div>
+
+                <script type="text/javascript"
+                    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+                <script type="text/javascript">
+                    (function () {
+                        // Get your keys from https://dashboard.emailjs.com/
+                        emailjs.init({
+                            publicKey: "dzkfUguKuf2VbjX7D", // Replace with your Public Key
+                        });
+                    })();
+
+                    document.getElementById('contactForm').addEventListener('submit', function (event) {
+                        event.preventDefault(); // Prevent the default form submission
+
+                        const form = this;
+                        const submitButton = form.querySelector('.submit-btn');
+                        const messageDiv = document.getElementById('form-message');
+
+                        // Change button text to show loading state
+                        submitButton.disabled = true;
+                        submitButton.innerText = 'Sending...';
+
+                        // These IDs are from your EmailJS account
+                        const serviceID = 'service_4nusz11'; // Replace with your Service ID
+                        const templateID = 'template_8yzlqlt'; // Replace with your Template ID
+
+                        // Send the email using EmailJS
+                        emailjs.sendForm(serviceID, templateID, form)
+                            .then(() => {
+                                // Success
+                                submitButton.disabled = false;
+                                submitButton.innerText = 'Send Message';
+                                messageDiv.innerText = ' Message sent successfully!';
+                                messageDiv.style.color = 'green';
+                                form.reset(); // Clear the form fields
+                            }, (err) => {
+                                // Error
+                                submitButton.disabled = false;
+                                submitButton.innerText = 'Send Message';
+                                messageDiv.innerText = `Failed to send message. Error: ${JSON.stringify(err)}`;
+                                messageDiv.style.color = 'red';
+                            });
+                    });
+                </script>
 
                 <div class="col-md-5 connect">
                     <div class="contact-options">
                         <h3 class="section-title">Let's talk! We're here to assist you</h3>
 
                         <div class="contact-option-item">
-                            <a href="#" class="text-decoration-none">
-                                <i class="fas fa-comment-dots"></i>
-                                <span>Start a live chat</span>
+                            <a href="https://wa.me/919037913794" target="_blank" class="text-decoration-none">
+
+                                <i class="fab fa-whatsapp"></i>
+
+                                <span>Chat on WhatsApp</span>
                             </a>
                         </div>
 
-                        <div class="contact-option-item">
-                            <a href="#" class="text-decoration-none">
-                                <i class="fab fa-twitter"></i>
-                                <span>Message us on X</span>
-                            </a>
-                        </div>
+
 
                         <div class="contact-option-item">
                             <a href="https://www.linkedin.com/company/zappq/" class="text-decoration-none">
@@ -951,14 +1046,14 @@
 
                 <!-- Product Column -->
                 <div class="media">
-                    <div class="">
+                    <!-- <div class="">
                         <h3 class="footer-title">Product</h3>
                         <ul class="footer-links space-y-2">
                             <li><a href="#">Overview</a></li>
                             <li><a href="#">Feature</a></li>
                             <li><a href="#">Tutorial</a></li>
                         </ul>
-                    </div>
+                    </div> -->
 
                     <!-- Company Column -->
                     <div class="">
@@ -1010,16 +1105,15 @@
             <!-- Copyright and Social Icons -->
             <div class="copyright">
                 <div class="mb-4 md:mb-0">
-                    <p>@2025 Copyright<b style="color:#1DEE7B;">ZappQ </b>All Rights Reserved</p>
+                    <p>@2025 Copyright<b style="color:#1DEE7B;"> QUADVARE TECHNOLOGIES PVT LTD </b>All Rights Reserved
+                    </p>
                 </div>
                 <div class="flex space-x-4">
                     <button onclick="navigateWithLoading('https://www.facebook.com/share/163Pbci9RT/?mibextid=wwXIfr')"
                         class="social-icon">
                         <img src="./assets/images/Vector (1).svg" alt="">
                     </button>
-                    <button onclick="navigateWithLoading('')" class="social-icon">
-                        <img src="./assets/images/Vector (2).svg" alt="">
-                    </button>
+
                     <button onclick="navigateWithLoading('https://www.linkedin.com/company/zappq/')"
                         class="social-icon">
                         <img src="./assets/images/Vector (3).svg" alt="">
