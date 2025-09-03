@@ -190,68 +190,68 @@ document.addEventListener("DOMContentLoaded", function () {
   slider.addEventListener("mouseleave", startAutoSlide);
 });
 
-// function navigateWithLoading(url) {
-//   // Show loader
-//   const loader = document.getElementById("loaderContainer");
-//   loader.style.display = "flex";
-
-//   // Simulate a short delay before actual navigation
-//   setTimeout(function () {
-//     // Actual navigation
-//     window.location.href = url;
-//   }, 1500); // 1.5 seconds delay to show the loading animation
-// }
-
-
 function navigateWithLoading(url) {
-  // Create loader container
-  const loaderContainer = document.createElement("div");
-  loaderContainer.id = "loaderContainer";
-  loaderContainer.style.cssText = `
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  `;
+  // Show loader
+  //const loader = document.getElementById("loaderContainer");
+  //loader.style.display = "flex";
 
-  // Create spinner element
-  const spinner = document.createElement("div");
-  spinner.className = "spinner";
-
-  // Append spinner to container
-  loaderContainer.appendChild(spinner);
-  document.body.appendChild(loaderContainer);
-
-  // Inject CSS for spinner
-  const style = document.createElement("style");
-  style.innerHTML = `
-    .spinner {
-      width: 60px;
-      height: 60px;
-      border: 6px solid #ddd;
-      border-top: 6px solid #3498db;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  `;
-  document.head.appendChild(style);
-
-  // Simulate delay before navigation
-  setTimeout(function () {
+  // Simulate a short delay before actual navigation
+  // setTimeout(function () {
+    // Actual navigation
     window.location.href = url;
-  }, 1500);
+ // }, 1500); // 1.5 seconds delay to show the loading animation
 }
+
+
+// function navigateWithLoading(url) {
+//   // Create loader container
+//   const loaderContainer = document.createElement("div");
+//   loaderContainer.id = "loaderContainer";
+//   loaderContainer.style.cssText = `
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background: rgba(255, 255, 255, 0.9);
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     z-index: 9999;
+//   `;
+
+//   // Create spinner element
+//   const spinner = document.createElement("div");
+//   spinner.className = "spinner";
+
+//   // Append spinner to container
+//   loaderContainer.appendChild(spinner);
+//   document.body.appendChild(loaderContainer);
+
+//   // Inject CSS for spinner
+//   const style = document.createElement("style");
+//   style.innerHTML = `
+//     .spinner {
+//       width: 60px;
+//       height: 60px;
+//       border: 6px solid #ddd;
+//       border-top: 6px solid #3498db;
+//       border-radius: 50%;
+//       animation: spin 1s linear infinite;
+//     }
+
+//     @keyframes spin {
+//       0% { transform: rotate(0deg); }
+//       100% { transform: rotate(360deg); }
+//     }
+//   `;
+//   document.head.appendChild(style);
+
+//   // Simulate delay before navigation
+//   setTimeout(function () {
+//     window.location.href = url;
+//   }, 1500);
+// }
 
 
 
