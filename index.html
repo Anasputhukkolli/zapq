@@ -877,83 +877,42 @@
                             <div class="row mb-3">
                                 <div class="col-md-6 mb-3 mb-md-0">
                                     <label for="firstName" class="form-label">First name</label>
-                                    <input required type="text" class="form-control" id="firstName"
+                                    <input required type="text" class="form-control" id="firstName" name="firstName"
                                         placeholder="First name">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="lastName" class="form-label">Last name</label>
-                                    <input required type="text" class="form-control" id="lastName"
+                                    <input required type="text" class="form-control" id="lastName" name="lastName"
                                         placeholder="Last name">
                                 </div>
                             </div>
 
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input required type="email" class="form-control" id="email"
+                                <input required type="email" class="form-control" id="email" name="email"
                                     placeholder="Email address">
                             </div>
 
                             <div class="mb-3">
                                 <label for="phone" class="form-label">Phone number</label>
-                                <input required type="tel" class="form-control" id="phone" placeholder="+91 0000000000">
+                                <input required type="tel" class="form-control" id="phone" name="phone"
+                                    placeholder="+91 0000000000">
                             </div>
 
                             <div class="mb-4">
                                 <label for="message" class="form-label">Message</label>
-                                <textarea required class="form-control" id="message" rows="5"
+                                <textarea required class="form-control" id="message" name="message" rows="5"
                                     placeholder="Leave us a message"></textarea>
                             </div>
 
                             <button type="submit" class="submit-btn">Send Message</button>
                         </form>
+                                                                                                                                                
                         <div id="form-message" class="mt-3"></div>
                     </div>
                 </div>
 
-                <script type="text/javascript"
-                    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-                <script type="text/javascript">
-                    (function () {
-                        // Get your keys from https://dashboard.emailjs.com/
-                        emailjs.init({
-                            publicKey: "dzkfUguKuf2VbjX7D", // Replace with your Public Key
-                        });
-                    })();
-
-                    document.getElementById('contactForm').addEventListener('submit', function (event) {
-                        event.preventDefault(); // Prevent the default form submission
-
-                        const form = this;
-                        const submitButton = form.querySelector('.submit-btn');
-                        const messageDiv = document.getElementById('form-message');
-
-                        // Change button text to show loading state
-                        submitButton.disabled = true;
-                        submitButton.innerText = 'Sending...';
-
-                        // These IDs are from your EmailJS account
-                        const serviceID = 'service_4nusz11'; // Replace with your Service ID
-                        const templateID = 'template_8yzlqlt'; // Replace with your Template ID
-
-                        // Send the email using EmailJS
-                        emailjs.sendForm(serviceID, templateID, form)
-                            .then(() => {
-                                // Success
-                                submitButton.disabled = false;
-                                submitButton.innerText = 'Send Message';
-                                messageDiv.innerText = ' Message sent successfully!';
-                                messageDiv.style.color = 'green';
-                                form.reset(); // Clear the form fields
-                            }, (err) => {
-                                // Error
-                                submitButton.disabled = false;
-                                submitButton.innerText = 'Send Message';
-                                messageDiv.innerText = `Failed to send message. Error: ${JSON.stringify(err)}`;
-                                messageDiv.style.color = 'red';
-                            });
-                    });
-                </script>
 
                 <div class="col-md-5 connect">
                     <div class="contact-options">
